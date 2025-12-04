@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+/* In your main CSS file */
+
+@theme {
+  /* Extend the default color palette with your custom color names */
+  --color-hero-background: linear-Gradient(to right, #ffcf33, #664e00);
+  --color-bulk-order-background: linear-Gradient(to right, #0a6a0c, #cc9c00);
+  --color-special-offer-background: linear-Gradient(to right, #ff9900, #cc4b00);
+  --color-footer-background-800: #1f4720;
+}
+.slide1 {
+  background: linear-Gradient(to right, #664e00, #ffcf33);
+  height: 18rem;
+}
+.slide2 {
+  background: linear-Gradient(to right, #4caf4f, #204921);
+  height: 18rem;
+}
+.saving,
+.bulkdeals {
+  font-weight: 200;
+}
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card {
+  flex: 1;
+  width: 20rem;
+  height: 180px;
+  margin: 0.7rem;
+}
+.bulk{
+ 
+  background: linear-Gradient(to right, #204921,  #ffcf33 ); 
+}
+.special{
+ 
+  background: linear-Gradient(to right, orange,  rgb(255, 89, 0)); 
+}

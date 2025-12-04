@@ -1,0 +1,165 @@
+import React, { useState } from "react";
+import { FaChevronDown, FaChevronRight } from "react-icons/fa";
+import carrot from "../assets/carrot.png";
+import tomatoes from "../assets/tomatoes.png";
+import bellpepper from "../assets/bellpepper.png";
+import redpepper from "../assets/redpepper.png";
+import onion from "../assets/onions.png";
+import Cabbage from "../assets/cabbage.png";
+import { Link } from "react-router-dom";
+
+export default function ProductCards() {
+  return (
+    <div className="w-full my-5">
+      <div className="flex items-center justify-between px-5">
+        <h1 className="text-[12px]">Vegitables & Fruits</h1>
+        <p className="text-green-600 flex items-center gap-2 text-[10px]">
+          See All
+          <FaChevronRight />
+        </p>
+      </div>
+      {/* card content */}
+      <div className="card-container">
+        <div className=" card bg-white">
+          <div className="bg-amber-100 h-[90px] py-5 ">
+            <Link to="/Productdetails">
+              <img
+                src={tomatoes}
+                alt="fresh tomatoes"
+                className="w-[60px] mx-auto  "
+              />
+            </Link>
+          </div>
+          <div className="px-1">
+            <h1 className="text-[10px] pt-1">Tomatoes</h1>
+            <p className="text-[10px] font-bold">#3,500</p>
+            <div className="flex items-center justify-between py-2">
+              <p className="flex items-center gap-2 text-[10px]">
+                1 Paint
+                <FaChevronDown className="text-[9px]" />
+              </p>
+              <button className="text-[10px] bg-amber-500 py-0.5 px-2 text-white rounded-xs">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className=" card bg-white">
+          <div className="bg-amber-100 h-[90px] py-5 ">
+            <img
+              src={redpepper}
+              alt="fresh tomatoes"
+              className="w-[60px] mx-auto  "
+            />
+          </div>
+          <div className="px-1">
+            <h1 className="text-[10px] pt-1">Long-pepper</h1>
+            <p className="text-[10px] font-bold">#3,500</p>
+            <div className="flex items-center justify-between py-2">
+              <p className="flex items-center gap-2 text-[10px]">
+                1 Paint
+                <FaChevronDown className="text-[9px]" />
+              </p>
+              <button className="text-[10px] bg-amber-500 py-0.5 px-2 text-white rounded-xs">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className=" card bg-white">
+          <div className="bg-amber-100 h-[90px] py-5 ">
+            <img
+              src={carrot}
+              alt="fresh tomatoes"
+              className="w-[60px] mx-auto  "
+            />
+          </div>
+          <div className="px-1">
+            <h1 className="text-[10px] pt-1">Carrot</h1>
+            <p className="text-[10px] font-bold">#3,500</p>
+            <div className="flex items-center justify-between py-2">
+              <p className="flex items-center gap-2 text-[10px]">
+                1 Paint
+                <FaChevronDown className="text-[9px]" />
+              </p>
+              <button className="text-[10px] bg-amber-500 py-0.5 px-2 text-white rounded-xs">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className=" card bg-white">
+          <div className="bg-amber-100 h-[90px] py-5 ">
+            <img
+              src={onion}
+              alt="fresh tomatoes"
+              className="w-[45px] mx-auto  "
+            />
+          </div>
+          <div className="px-1">
+            <h1 className="text-[10px] pt-1">Onions</h1>
+            <p className="text-[10px] font-bold">#3,500</p>
+            <div className="flex items-center justify-between py-2">
+              <p className="flex items-center gap-2 text-[10px]">
+                1 Paint
+                <FaChevronDown className="text-[9px]" />
+              </p>
+              <button className="text-[10px] bg-amber-500 py-0.5 px-2 text-white rounded-xs">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className=" card bg-white">
+          <div className="bg-amber-100 h-[90px] py-5 ">
+            <img
+              src={bellpepper}
+              alt="fresh tomatoes"
+              className="w-[60px] mx-auto  "
+            />
+          </div>
+          <div className="px-1">
+            <h1 className="text-[10px] pt-1">Bell Pepper</h1>
+            <p className="text-[10px] font-bold">#3,500</p>
+            <div className="flex items-center justify-between py-2">
+              <p className="flex items-center gap-2 text-[10px]">
+                1 Paint
+                <FaChevronDown className="text-[9px]" />
+              </p>
+              <button className="text-[10px] bg-amber-500 py-0.5 px-2 text-white rounded-xs">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className=" card bg-white">
+          <div className="bg-amber-100 h-[90px] py-5 ">
+            <img
+              src={Cabbage}
+              alt="fresh tomatoes"
+              className="w-[60px] mx-auto  "
+            />
+          </div>
+          <div className="px-1">
+            <h1 className="text-[10px] pt-1">Cabbage</h1>
+            <p className="text-[10px] font-bold">#3,500</p>
+            <div className="flex items-center justify-between py-2">
+              <p className="flex items-center gap-2 text-[10px]">
+                1 Paint
+                <FaChevronDown className="text-[9px]" />
+              </p>
+              <button className="text-[10px] bg-amber-500 py-0.5 px-2 text-white rounded-xs">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
