@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaRegUser } from "react-icons/fa";
+import {Link} from 'react-router-dom'
 
 export default function CheckoutNav() {
   return (
@@ -12,14 +13,16 @@ export default function CheckoutNav() {
           <span>Secure Payment</span>
         </div>
       </div>
-{/* logo */}
+      {/* logo */}
       <div className=" text-black p-4 px-8 text-lg font-semibold">
         <div className="flex items-center justify-between gap-3">
           <h1 className="font-bold"> LOGO</h1>
-          <button className="text-green-500 flex items-center gap-1.5 cursor-pointer text-[10px]">
-            <FaRegUser className="text-[10px] " />
-            Login
-          </button>
+          <Link to="/SignIn">
+            <button className="text-green-500 flex items-center gap-1.5 cursor-pointer text-[10px]">
+              <FaRegUser className="text-[10px] " />
+              Login
+            </button>
+          </Link>
         </div>
       </div>
     </div>

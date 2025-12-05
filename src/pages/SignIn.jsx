@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { IoEyeOffOutline, IoBasketOutline } from "react-icons/io5";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa";
@@ -12,6 +12,7 @@ function SignIn() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle sign in logic here
+   
   };
 
   return (
@@ -144,6 +145,7 @@ function SignIn() {
           </div>
         </div>
       </div>
+      <Link to="/seller/overview">overview</Link>
     </div>
   );
 }
