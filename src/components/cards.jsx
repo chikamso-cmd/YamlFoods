@@ -28,7 +28,12 @@ const closeModal = () => {
 
 
   return (
-    <div className="w-full my-5">
+    <div
+      className="w-full my-5"
+      data-aos="fade-in"
+      data-aos-delay="300"
+      data-aos-duration="1000"
+    >
       <div className="flex items-center justify-between px-5">
         <h1 className="text-[12px]">Vegitables & Fruits</h1>
         <p className="text-green-600 flex items-center gap-2 text-[10px]">

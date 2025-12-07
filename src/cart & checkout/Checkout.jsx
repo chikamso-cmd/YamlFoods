@@ -13,10 +13,9 @@ export default function Checkout() {
   return (
     <div className="w-full min-h-screen">
       {/* Top Bar */}
-     <CheckoutNav />
+      <CheckoutNav />
 
       {/* Header */}
-   
 
       {/* Breadcrumb */}
       <div className="px-8 py-4 text-gray-800 text-sm flex items-center gap-1">
@@ -32,7 +31,12 @@ export default function Checkout() {
       </div>
 
       {/* main content */}
-      <div className="w-full px-6 py-5">
+      <div
+        className="w-full px-6 py-5"
+        data-aos="slide-up"
+        data-aos-delay="500"
+        data-aos-duration="4000"
+      >
         <div className="px-8">
           {/* Checkout Items */}
           <div className="flex gap-7">

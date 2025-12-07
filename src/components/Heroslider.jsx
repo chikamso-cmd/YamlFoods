@@ -18,7 +18,12 @@ const GrocerySlider = () => {
   };
 
   return (
-    <div className=" ">
+    <div
+      className=" "
+      data-aos="fade-in"
+      data-aos-delay="300"
+      data-aos-duration="2000"
+    >
       <Slider {...settings}>
         {/* Slide 1 */}
         <div className="">

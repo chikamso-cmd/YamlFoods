@@ -17,7 +17,12 @@ import Howitworks from "./Howitworks";
 export default function Shopcategory() {
   return (
     <div>
-      <div className="w-full px-6 py-10 ">
+      <div
+        className="w-full px-6 py-10 "
+        data-aos="zoom-in"
+        data-aos-delay="300"
+        data-aos-duration="1000"
+      >
         <h1 className="text-xl text-center font-medium">Shop by Category</h1>
         <div className=" flex justify-between w-full px-6 py-10 gap-3 ">
           <div className="bg-[#EDF7EE] p-2 w-[200px] rounded-2xl text-center">

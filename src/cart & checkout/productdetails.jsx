@@ -148,7 +148,12 @@ export default function ProductDetails() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-gray-50 p-6 max-w-7xl mx-auto">
+    <div
+      className="w-full min-h-screen bg-gray-50 p-6 max-w-7xl mx-auto"
+      data-aos="zoom-in"
+      data-aos-delay="300"
+      data-aos-duration="1000"
+    >
       <Breadcrumb category={product.category} name={product.name} />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-4">
@@ -156,15 +161,22 @@ export default function ProductDetails() {
 
         <div className="bg-white shadow rounded-lg p-6">
           <ProductTags category={product.category} inStock={product.inStock} />
-          <ProductPricing name={product.name} price={product.price} priceUnit={product.priceUnit} />
-          <ProductSelect 
-            variants={product.variants} 
+          <ProductPricing
+            name={product.name}
+            price={product.price}
+            priceUnit={product.priceUnit}
+          />
+          <ProductSelect
+            variants={product.variants}
             selectedType={selectedType}
             onTypeChange={handleTypeChange}
           />
-          <QuantitySelector quantity={quantity} onQuantityChange={handleQuantityChange} />
+          <QuantitySelector
+            quantity={quantity}
+            onQuantityChange={handleQuantityChange}
+          />
 
-          <button 
+          <button
             onClick={handleAddToCart}
             className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 text-sm rounded shadow transition"
           >
@@ -175,7 +187,7 @@ export default function ProductDetails() {
         </div>
       </div>
 
-      <DescriptionSection description={product.description}/>
+      <DescriptionSection description={product.description} />
       <RecentlyViewed />
     </div>
   );

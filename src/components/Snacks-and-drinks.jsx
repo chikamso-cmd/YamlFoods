@@ -22,7 +22,12 @@ export default function Snacks_and_drinks() {
   };
 
   return (
-    <div className="w-full my-5">
+    <div
+      className="w-full my-5"
+      data-aos="zoom-in-down"
+      data-aos-delay="400"
+      data-aos-duration="2000"
+    >
       <div className="flex items-center justify-between px-5">
         <h1 className="text-[12px]">Snacks & Drinks</h1>
         <p className="text-green-600 flex items-center gap-2 text-[10px]">

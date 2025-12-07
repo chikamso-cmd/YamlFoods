@@ -28,7 +28,13 @@ export default function ReviewOrder() {
       </div>
 
       {/* main content */}
-      <div className="w-full px-6 py-5">
+      <div
+        className="w-full px-6 py-5"
+        data-aos="zoom-in-right"
+        data-aos-easing="ease-oup"
+        data-aos-delay="300"
+        data-aos-duration="1000"
+      >
         <div className="px-8">
           {/* Checkout Items */}
           <div className="flex gap-7">
@@ -224,8 +230,7 @@ export default function ReviewOrder() {
                 </div>
               </div>
             </div>
-              <OrderSummary />
-        
+            <OrderSummary />
           </div>
         </div>
       </div>

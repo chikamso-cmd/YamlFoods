@@ -48,7 +48,12 @@ export default function CartPage() {
       </div>
 
       {/* Main Content */}
-      <div className="px-8 flex gap-8">
+      <div
+        className="px-8 flex gap-8"
+        data-aos="fade-up"
+        data-aos-delay="300"
+        data-aos-duration="1000"
+      >
         {/* Cart Items */}
         <div className="flex-1">
           <a href="#" className="text-green-700 text-sm">
@@ -113,7 +118,7 @@ export default function CartPage() {
 
           {/* Recently Viewed */}
           <div className="mt-8 font-semibold text-lg">Recently Viewed</div>
-         <RecentlyViewed />
+          <RecentlyViewed />
         </div>
 
         {/* Order Summary */}

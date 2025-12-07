@@ -3,7 +3,12 @@ import bulkorder from "../assets/Fruit_cart.png";
 
 export default function Bulk_order() {
   return (
-    <div className="w-full px-5 py-3 text-white">
+    <div
+      className="w-full px-5 py-3 text-white"
+      data-aos="zoom-in-up"
+      data-aos-delay="400"
+      data-aos-duration="2000"
+    >
       <div className="bulk grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 rounded-4xl px-6">
         <div className="pl-8 py-5 mt-1">
           <h1 className="py-5 text-3xl">

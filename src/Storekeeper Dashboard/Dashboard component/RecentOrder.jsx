@@ -3,7 +3,7 @@ import { PiCaretRight } from "react-icons/pi";
 
 export default function RecentOrder() {
   return (
-    <div className="bg-white shadow-gray-50 rounded w-full px-3 py-2 mt-4">
+    <div className="bg-white shadow-gray-50 rounded w-full px-3 py-2 mt-4" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
       <div className="border-b border-b-gray-300 flex items-center justify-between mb-3">
         <h1 className="py-2 text-[12px] font-semibold text-gray-500">
           Recent Order

@@ -42,7 +42,12 @@ export default function Checkout() {
       </div>
 
       {/* main content */}
-      <div className="w-full px-6 py-5">
+      <div
+        className="w-full px-6 py-5"
+        data-aos="fade-up"
+        data-aos-delay="400"
+        data-aos-duration="2000"
+      >
         <div className="px-8">
           {/* Checkout Items */}
           <div className="flex gap-7">
@@ -134,7 +139,13 @@ export default function Checkout() {
           </div>
         </div>
       </div>
-      <UploadReceiptModal isOpen={isOpen} onClose={handleClose} />
+      <UploadReceiptModal
+        isOpen={isOpen}
+        onClose={handleClose}
+        data-aos="zoom-in"
+        data-aos-delay="400"
+        data-aos-duration="2000"
+      />
       <Footer />
     </div>
   );

@@ -7,7 +7,12 @@ import basket from "../assets/basket.png";
 
 export default function Howitworks() {
   return (
-    <div className="px-6 py-5">
+    <div
+      className="px-6 py-5"
+      data-aos="zoom-in-down"
+      data-aos-delay="500"
+      data-aos-duration="2000"
+    >
       <h1 className="text-center font-medium text-xl">How it Works</h1>
       <div className="flex items-center justify-between py-4 mt-5 mx-9">
         <div className="w-[180px] h-[150px] text-center">

@@ -53,7 +53,12 @@ function SignUp() {
       </div>
 
       {/* Main form container */}
-      <div className="flex-1 flex justify-center items-center p-5">
+      <div
+        className="flex-1 flex justify-center items-center p-5"
+        data-aos="zoom-in"
+        data-aos-delay="300"
+        data-aos-duration="1000"
+      >
         <div className="bg-[#ffffff] rounded-lg p-8 w-full max-w-md text-cente shadow">
           {/* User icon */}
           <div className="bg-[#f7ebd0] w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
@@ -157,11 +162,11 @@ function SignUp() {
                   className="absolute right-2.5 top-1/2 transform -translate-y-1/2 bg-transparent border-none cursor-pointer text-gray-500"
                   onClick={() => setShowPassword(!showPassword)}
                 >
-                   {showPassword ? (
-                                      <FaRegEye className="bg-white w-[30px]" />
-                                    ) : (
-                                      <IoEyeOffOutline className="bg-white w-[30px]" />
-                                    )}
+                  {showPassword ? (
+                    <FaRegEye className="bg-white w-[30px]" />
+                  ) : (
+                    <IoEyeOffOutline className="bg-white w-[30px]" />
+                  )}
                 </button>
               </div>
               <p className="text-xs text-amber-600 mt-1 hidden">

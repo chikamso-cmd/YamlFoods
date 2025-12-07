@@ -7,7 +7,7 @@ import { FiAlertTriangle } from "react-icons/fi";
 
 export default function OverviewCard() {
   return (
-    <div className="flex flex-wrap gap-3 w-full ">
+    <div className="flex flex-wrap gap-3 w-full" data-aos="fade-up">
       {/* total orders */}
       <div className="bg-white flex-1 rounded shadow-amber-50 flex items-center justify-between gap-8 px-2 py-2">
         <div>

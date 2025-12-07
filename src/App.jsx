@@ -21,8 +21,20 @@ import Successfulpayment from "./cart & checkout/Successfulpayment";
 import LayoutForStoreKeeper from "./Storekeeperdashboard layout/LayoutForStoreKeeper";
 import DashboardOverview from "./Storekeeper Dashboard/DashboardOverview";
 import Orders from "./Storekeeper Dashboard/Orders";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; 
 
 function App() {
+
+ useEffect(() => {
+   AOS.init({
+     duration: 1000, // Animation duration in milliseconds
+     once: true, // Animation happens only once when scrolling down
+     disable: false, // Accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+   });
+ }, []);
+
   return (
     <Router>
       <ScrollToTop />

@@ -39,7 +39,12 @@ function SignIn() {
       </div>
 
       {/* Main form container */}
-      <div className="flex-1 flex justify-center items-center p-5">
+      <div
+        className="flex-1 flex justify-center items-center p-5"
+        data-aos="zoom-in-up"
+        data-aos-delay="300"
+        data-aos-duration="1000"
+      >
         <div className="bg-white rounded-lg p-8 w-full max-w-md text-center shadow">
           {/* User icon */}
           <div className="bg-green-50  w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">

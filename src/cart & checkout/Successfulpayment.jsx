@@ -39,7 +39,12 @@ export default function Successfulpayment() {
       </div>
 
       {/* main content */}
-      <div className="w-full px-6 py-5">
+      <div
+        className="w-full px-6 py-5"
+        data-aos="zoom-in"
+        data-aos-delay="400"
+        data-aos-duration="2000"
+      >
         <div className="px-8">
           {/* Checkout Items */}
           <div className="flex gap-7">
@@ -80,7 +85,10 @@ export default function Successfulpayment() {
                 <button className="cursor-pointer w-full text-green-500 border border-green-500 px-3 py-1 text-[10px] rounded  duration-500 ">
                   Continue Shopping
                 </button>
-                <button disabled className="cursor-not-allowed w-full bg-green-600 text-white border border-green-500 px-3 py-1 text-[10px] rounded  flex items-center gap-2 justify-center-safe">
+                <button
+                  disabled
+                  className="cursor-not-allowed w-full bg-green-600 text-white border border-green-500 px-3 py-1 text-[10px] rounded  flex items-center gap-2 justify-center-safe"
+                >
                   <BsCheckCircle /> Payment-Confirmed - Paid
                 </button>
               </div>
