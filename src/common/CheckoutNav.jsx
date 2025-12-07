@@ -17,12 +17,12 @@ export default function CheckoutNav() {
       <div className=" text-black p-4 px-8 text-lg font-semibold">
         <div className="flex items-center justify-between gap-3">
           <h1 className="font-bold"> LOGO</h1>
-          <Link to="/SignIn">
+         
             <button className="text-green-500 flex items-center gap-1.5 cursor-pointer text-[10px]">
               <FaRegUser className="text-[10px] " />
-              Login
+              James
             </button>
-          </Link>
+          
         </div>
       </div>
     </div>

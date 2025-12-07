@@ -4,6 +4,7 @@ import hero from '../assets/hero_img.png'
 import fruit_basket from '../assets/fruit_basket.png'
 import rectangle from '../assets/Rectangle 3.png'
 import Rectangle from '../assets/rectangle3.png'
+import { Link } from "react-router-dom";
 
 
 const GrocerySlider = () => {
@@ -64,9 +65,11 @@ const GrocerySlider = () => {
                 <button className=" saving bg-white text-[12px] text-[#4CAF4F]  px-7 py-1 rounded-md font-semibold hover:bg-gray-100 cursor-pointer">
                   Start Saving
                 </button>
-                <button className="bg-transparent text-[12px] text-white px-7 py-1 rounded-md font-lighter border cursor-pointer">
-                  Register Now
-                </button>
+                <Link to="/Signin">
+                  <button className="bg-transparent text-[12px] text-white px-7 py-1 rounded-md font-lighter border cursor-pointer">
+                    Register Now
+                  </button>
+                </Link>
               </div>
             </div>
 

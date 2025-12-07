@@ -145,7 +145,7 @@ function SignIn() {
           </div>
         </div>
       </div>
-      <Link to="/seller/overview">overview</Link>
+      <Link to="/storekeeper/store-overview">layout</Link>
     </div>
   );
 }

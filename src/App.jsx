@@ -16,6 +16,11 @@ import MyOrders from "./Seller dashboard/MyOrders";
 import LayoutForSellers from "./dashboardlayout/LayoutForSeller";
 import ViewOrder from "./Seller dashboard/ViewOrder";
 import Addresses from "./Seller dashboard/Addresses";
+import AccountSettings from "./Seller dashboard/AccountSettings";
+import Successfulpayment from "./cart & checkout/Successfulpayment";
+import LayoutForStoreKeeper from "./Storekeeperdashboard layout/LayoutForStoreKeeper";
+import DashboardOverview from "./Storekeeper Dashboard/DashboardOverview";
+import Orders from "./Storekeeper Dashboard/Orders";
 
 function App() {
   return (
@@ -36,6 +41,8 @@ function App() {
         <Route path="/Selectoptions" element={<Selectoptions />} />
         <Route path="/ReviewOrder" element={<ReviewOrder />} />
         <Route path="/PaymentPage" element={<PaymentPage />} />
+        <Route path="/Successfulpayment" element={<Successfulpayment />} />
+        {/* <Route path="/storekeeper" element={<LayoutForStoreKeeper />}></Route> */}
 
         {/* Seller dashboard layout */}
         <Route path="/seller" element={<LayoutForSellers />}>
@@ -43,6 +50,13 @@ function App() {
           <Route path="my-orders" element={<MyOrders />} />
           <Route path="view-orders" element={<ViewOrder />} />
           <Route path="view-address" element={<Addresses />} />
+          <Route path="account-settings" element={<AccountSettings />} />
+        </Route>
+
+        {/* storekeeper dashboard routes */}
+        <Route path="/storekeeper" element={<LayoutForStoreKeeper />}>
+        <Route path="store-overview" element={<DashboardOverview />} />
+        <Route path="my-orders" element={<Orders />} />
         </Route>
       </Routes>
     </Router>

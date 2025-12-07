@@ -4,38 +4,68 @@ import { BsBoxSeam } from "react-icons/bs";
 import { TfiLocationPin } from "react-icons/tfi";
 import { FiSettings } from "react-icons/fi";
 import { LuLogOut } from "react-icons/lu";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function DashboardSidebar() {
   return (
-    <div className="w-full border border-gray-100 shadow-cyan-50 rounded h-screen px-2 py-3 text-center">
+    <div className="w-full border border-gray-100 shadow-cyan-50 rounded h-full px-2 py-3 text-center">
       <nav className="py-9 text-[13px] font-semibold text-center">
         <ul className="justify-center px-9">
-          <Link to="/seller/overview">
-            <li className="flex items-center gap-4  rounded py-3 bg-green-50 text-green-500 px-5 text-center cursor-pointer">
+          <NavLink
+            to="/seller/overview"
+            className={({ isActive }) =>
+              ` rounded  text-center cursor-pointer py-3 px-5 flex items-center gap-4 ${
+                isActive ? " bg-green-100 text-green-500" : ""
+              }`
+            }
+          >
+            <li className="flex items-center gap-4  ">
               <CiGrid32 />
               Dashboard
             </li>
-          </Link>
+          </NavLink>
 
-          <Link to="/seller/my-orders">
-            <li className="flex items-center gap-4  rounded py-3 px-5 text-center cursor-pointer">
+          <NavLink
+            to="/seller/my-orders"
+            className={({ isActive }) =>
+              `rounded  text-center cursor-pointer py-3 px-5 flex items-center gap-4 ${
+                isActive ? " bg-green-100 text-green-500" : ""
+              }`
+            }
+          >
+            <li className="flex items-center gap-4">
               <BsBoxSeam />
               My Orders
             </li>
-          </Link>
+          </NavLink>
 
-          <Link to="/seller/view-address">
-            <li className="flex items-center gap-4  rounded py-3  px-5 text-center cursor-pointer">
+          <NavLink
+            to="/seller/view-address"
+            className={({ isActive }) =>
+              `rounded  text-center cursor-pointer py-3 px-5 flex items-center gap-4 ${
+                isActive ? " bg-green-100 text-green-500" : ""
+              }`
+            }
+          >
+            <li className="flex items-center gap-4 ">
               <TfiLocationPin />
               Addreses
             </li>
-          </Link>
+          </NavLink>
 
-          <li className="flex items-center gap-4  rounded py-3 px-5 text-center cursor-pointer">
-            <FiSettings />
-            Settings
-          </li>
+          <NavLink
+            to="/seller/account-settings"
+            className={({ isActive }) =>
+              `rounded  text-center cursor-pointer py-3 px-5 flex items-center gap-4 ${
+                isActive ? "bg-green-100 text-green-500" : ""
+              }`
+            }
+          >
+            <li className="flex items-center gap-4 cursor-pointer">
+              <FiSettings />
+              Settings
+            </li>
+          </NavLink>
         </ul>
       </nav>
       <div className="border-t  border-gray-300 mt-50">

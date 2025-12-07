@@ -24,12 +24,11 @@ export default function DashbordNav() {
             className=" border rounded border-gray-300 px-2 py-1 focus:outline-green-500 w-100 text-[12px]"
           />
           <div className=" flex gap-8 items-center ">
-            <Link to="/SignIn">
-              <button className="text-green-500 flex items-center gap-1.5 cursor-pointer text-[12px]">
-                <FaRegUser className="text-[10px] " />
-                John
-              </button>
-            </Link>
+            <button className="text-green-500 flex items-center gap-1.5 cursor-pointer text-[12px]">
+              <FaRegUser className="text-[10px] " />
+              John
+            </button>
+
             <Link to="/Cart">
               <button className="flex gap-2 items-center text-[12px] cursor-pointer">
                 {" "}
