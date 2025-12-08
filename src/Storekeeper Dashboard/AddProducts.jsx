@@ -3,7 +3,7 @@ import { Plus, Upload } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import { PiCaretLeftLight } from "react-icons/pi";
 
-export default function AddBulkProduct() {
+export default function AddProduct() {
   return (
     <div
       className="w-full bg-[#ffffff] min-h-screen p-4 md:p-6"
@@ -13,7 +13,9 @@ export default function AddBulkProduct() {
     >
       <NavLink to="/storekeeper/product-management">
         <button className="text-[12px] pb-6 cursor-pointer flex items-center gap-3 px-3">
-          <PiCaretLeftLight /> Back to product
+          {" "}
+          <PiCaretLeftLight />
+          Back to product
         </button>
       </NavLink>
       <div className="max-w-[1200px] mx-auto bg-white rounded-xl shadow-sm p-4 md:p-6">
@@ -89,9 +91,11 @@ export default function AddBulkProduct() {
               Product Variants
             </h3>
 
-            <button className="flex items-center justify-center gap-1 bg-green-500 text-white px-4 py-2 rounded-lg text-sm w-full sm:w-auto">
-              <Plus size={16} /> Add Variant
-            </button>
+            <NavLink to="/storekeeper/product-management/add-variants">
+              <button className="flex items-center justify-center gap-1 bg-green-500 text-white px-4 py-2 rounded-lg text-sm w-full sm:w-auto">
+                <Plus size={16} /> Add Variant
+              </button>
+            </NavLink>
           </div>
 
           <p className="text-sm text-gray-500 mt-1">
@@ -99,9 +103,9 @@ export default function AddBulkProduct() {
           </p>
 
           {/* Variant Boxes */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5">
+          <div className="grid  w-full md:grid-cols-1 gap-6 mt-5 ">
             <VariantCard />
-            <VariantCard />
+            {/* <VariantCard /> */}
           </div>
         </div>
 

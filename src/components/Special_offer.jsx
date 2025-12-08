@@ -6,7 +6,7 @@ export default function Special_offer() {
     <div
       className="w-full px-5 py-3 text-white"
       data-aos="zoom-in"
-      data-aos-delay="500"
+      data-aos-delay="600"
       data-aos-duration="2000"
     >
       <div className="special grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 rounded-4xl px-6">

@@ -1,99 +1,84 @@
-import React from "react";
-import { FaEye, FaEdit, FaTrash, FaPlus } from "react-icons/fa";
+// import React, { use } from "react";
+import { FaEye, FaEdit, FaTrash } from "react-icons/fa";
+import { Search, Filter, CheckCircle, XCircle } from "lucide-react";
+import { FaPlus, FaTrashCan } from "react-icons/fa6";
+import { SlEye } from "react-icons/sl";
+import { TfiTrash } from "react-icons/tfi";
+import { CiEdit } from "react-icons/ci";
+import { NavLink } from "react-router-dom";
+import ProductCard from "./Dashboard component/ProductCard";
 
 const InventoryDashboard = () => {
+  // const fame = use()
+
   return (
-    <div className="bg-gray-50 min-h-screen p-6">
-      {/* Header Section */}
-      <div className="mb-8">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-800 mb-2">
-              Single Products
-            </h1>
-            <div className="flex items-center">
-              <h2 className="text-xl font-semibold text-gray-700 mr-4">
-                Product Inventory
-              </h2>
-              <div className="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">
-                102
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Stats Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-          {/* Total Products Card */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-            <div className="flex items-start justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-500 mb-2">
-                  Total Products
-                </p>
-                <p className="text-3xl font-bold text-gray-800">102</p>
-              </div>
-              <div className="w-12 h-12 rounded-lg bg-blue-500 flex items-center justify-center">
-                <span className="text-white text-xl font-bold">102</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Active Products Card */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-            <div className="flex items-start justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-500 mb-2">
-                  Active Products
-                </p>
-                <p className="text-3xl font-bold text-gray-800">98</p>
-              </div>
-              <div className="w-12 h-12 rounded-lg bg-green-500 flex items-center justify-center">
-                <span className="text-white text-xl font-bold">98</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Total Variants Card */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-            <div className="flex items-start justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-500 mb-2">
-                  Total Variants
-                </p>
-                <p className="text-3xl font-bold text-gray-800">307</p>
-              </div>
-              <div className="w-12 h-12 rounded-lg bg-purple-500 flex items-center justify-center">
-                <span className="text-white text-xl font-bold">307</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Low Stock Items Card */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-            <div className="flex items-start justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-500 mb-2">
-                  Low Stock Items
-                </p>
-                <p className="text-3xl font-bold text-gray-800">5</p>
-              </div>
-              <div className="w-12 h-12 rounded-lg bg-orange-500 flex items-center justify-center">
-                <span className="text-white text-xl font-bold">5</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div className="border-t border-gray-300 my-8"></div>
-      </div>
+    <div className="bg-white min-h-screen p-6">
+      <ProductCard />
 
       {/* Products Table */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div
+        className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        data-aos-delay="600"
+      >
+        {/* Tabs */}
+
+        <div className="px-6 mt-4 flex justify-between gap-5 border-b border-gray-200">
+          <div className=" flex items-center gap-3">
+            <NavLink
+              to="/storekeeper/product-management"
+              className={({ isActive }) =>
+                `${
+                  isActive
+                    ? "text-green-600 font-semibold border-b border-b-green-600"
+                    : "text-gray-400"
+                }`
+              }
+            >
+              <button className="mb-3 text-[12px]"> Single Products</button>
+            </NavLink>
+            <NavLink
+              to="/storekeeper/product-management/bulk-product"
+              className={({ isActive }) =>
+                `${
+                  isActive
+                    ? "text-green-600 font-semibold border-b border-b-green-600"
+                    : ""
+                }`
+              }
+            >
+              <button className="mb-3 text-[12px]"> Bulk Products</button>
+            </NavLink>
+          </div>
+          {/* add product button */}
+          <NavLink to="/storekeeper/product-management/add-product">
+            <button className="flex items-center gap-2 text-[12px] bg-green-600 rounded px-5 text-white mb-2 cursor-pointer hover:bg-green-700 py-2">
+              {" "}
+              <FaPlus /> Add New Product
+            </button>
+          </NavLink>
+        </div>
         {/* Table Header */}
-        <div className="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
-          <h3 className="text-lg font-semibold text-gray-800">Products</h3>
+        <div className="flex justify-between w-full ">
+          <div className="px-6 py-4 border-b border-gray-200 flex items-center gap-3">
+            <h3 className="text-sm font-semibold text-gray-800">
+              Products Inventory{" "}
+            </h3>
+            <p className="text-[8px] bg-blue-100 text-blue-600 px-2 rounded-full py-0.5">
+              102
+            </p>
+          </div>
+          <div className="flex items-center justify-end px-10 gap-3 ">
+            <input
+              type="search"
+              placeholder="Search"
+              className="border border-gray-200 px-4 py-1 w-full rounded "
+            />
+            <button className="text-[12px] rounded-full px-3 py-1border bordfer-gray-200">
+              Filter
+            </button>
+          </div>
         </div>
 
         {/* Table */}
@@ -103,25 +88,25 @@ const InventoryDashboard = () => {
               <tr>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
+                  className="px-6 py-3 text-left text-[10px] font-semibold text-gray-700 uppercase tracking-wider"
                 >
                   Product
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
+                  className="px-6 py-3 text-left text-[10px] font-semibold text-gray-700 uppercase tracking-wider"
                 >
                   Category
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
+                  className="px-6 py-3 text-left text-[10px] font-semibold text-gray-700 uppercase tracking-wider"
                 >
                   Variants
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
+                  className="px-6 py-3 text-left text-[10px] font-semibold text-gray-700 uppercase tracking-wider"
                 >
                   Price
                 </th>
@@ -133,13 +118,13 @@ const InventoryDashboard = () => {
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
+                  className="px-6 py-3 text-left text-[10px] font-semibold text-gray-700 uppercase tracking-wider"
                 >
                   Status
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
+                  className="px-6 py-3 text-left text-[10px] font-semibold text-gray-700 uppercase tracking-wider"
                 >
                   Actions
                 </th>
@@ -167,19 +152,20 @@ const InventoryDashboard = () => {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                    <CheckCircle className="w-3 h-3 mr-1" />
                     Active
                   </span>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                   <div className="flex space-x-2">
-                    <button className="text-blue-600 hover:text-blue-900">
-                      <FaEye className="w-4 h-4" />
+                    <button className="gray-400 hover:text-blue-900 cursor-pointer">
+                      <SlEye />
                     </button>
-                    <button className="text-green-600 hover:text-green-900">
-                      <FaEdit className="w-4 h-4" />
+                    <button className=" hover:text-green-900 cursor-pointer">
+                      <CiEdit />
                     </button>
-                    <button className="text-red-600 hover:text-red-900">
-                      <FaTrash className="w-4 h-4" />
+                    <button className=" hover:text-red-900 cursor-pointer">
+                      <TfiTrash />
                     </button>
                   </div>
                 </td>
@@ -208,19 +194,20 @@ const InventoryDashboard = () => {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                    <CheckCircle className="w-3 h-3 mr-1" />
                     Active
                   </span>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                   <div className="flex space-x-2">
-                    <button className="text-blue-600 hover:text-blue-900">
-                      <FaEye className="w-4 h-4" />
+                    <button className="gray-400 hover:text-blue-900 cursor-pointer">
+                      <SlEye />
                     </button>
-                    <button className="text-green-600 hover:text-green-900">
-                      <FaEdit className="w-4 h-4" />
+                    <button className=" hover:text-green-900 cursor-pointer">
+                      <CiEdit />
                     </button>
-                    <button className="text-red-600 hover:text-red-900">
-                      <FaTrash className="w-4 h-4" />
+                    <button className=" hover:text-red-900 cursor-pointer">
+                      <TfiTrash />
                     </button>
                   </div>
                 </td>
@@ -247,19 +234,20 @@ const InventoryDashboard = () => {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                    <XCircle className="w-3 h-3 mr-1" />
                     Out of stock
                   </span>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                   <div className="flex space-x-2">
-                    <button className="text-blue-600 hover:text-blue-900">
-                      <FaEye className="w-4 h-4" />
+                    <button className="gray-400 hover:text-blue-900 cursor-pointer">
+                      <SlEye />
                     </button>
-                    <button className="text-green-600 hover:text-green-900">
-                      <FaEdit className="w-4 h-4" />
+                    <button className=" hover:text-green-900 cursor-pointer">
+                      <CiEdit />
                     </button>
-                    <button className="text-red-600 hover:text-red-900">
-                      <FaTrash className="w-4 h-4" />
+                    <button className=" hover:text-red-900 cursor-pointer">
+                      <TfiTrash />
                     </button>
                   </div>
                 </td>
@@ -282,23 +270,23 @@ const InventoryDashboard = () => {
                   </div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="text-sm text-gray-700">45</div>
+                  <div className="text-sm text-gray-700">5</div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                    Active
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-600">
+                    Restock
                   </span>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                   <div className="flex space-x-2">
-                    <button className="text-blue-600 hover:text-blue-900">
-                      <FaEye className="w-4 h-4" />
+                    <button className="gray-400 hover:text-blue-900 cursor-pointer">
+                      <SlEye />
                     </button>
-                    <button className="text-green-600 hover:text-green-900">
-                      <FaEdit className="w-4 h-4" />
+                    <button className=" hover:text-green-900 cursor-pointer">
+                      <CiEdit />
                     </button>
-                    <button className="text-red-600 hover:text-red-900">
-                      <FaTrash className="w-4 h-4" />
+                    <button className=" hover:text-red-900 cursor-pointer">
+                      <TfiTrash />
                     </button>
                   </div>
                 </td>
@@ -327,19 +315,61 @@ const InventoryDashboard = () => {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                    <CheckCircle className="w-3 h-3 mr-1" />
                     Active
                   </span>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                   <div className="flex space-x-2">
-                    <button className="text-blue-600 hover:text-blue-900">
-                      <FaEye className="w-4 h-4" />
+                    <button className="gray-400 hover:text-blue-900 cursor-pointer">
+                      <SlEye />
                     </button>
-                    <button className="text-green-600 hover:text-green-900">
-                      <FaEdit className="w-4 h-4" />
+                    <button className=" hover:text-green-900 cursor-pointer">
+                      <CiEdit />
                     </button>
-                    <button className="text-red-600 hover:text-red-900">
-                      <FaTrash className="w-4 h-4" />
+                    <button className=" hover:text-red-900 cursor-pointer">
+                      <TfiTrash />
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              {/* Tomatoes Row */}
+              <tr className="hover:bg-gray-50">
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="text-sm font-medium text-gray-900">
+                    Tomatoes
+                  </div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="text-sm text-gray-700">Vegetables</div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="text-sm text-gray-700">1 Paint</div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="text-sm font-medium text-gray-900">
+                    ¥2,000
+                  </div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="text-sm text-gray-700">0</div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                    <XCircle className="w-3 h-3 mr-1" />
+                    Out of stock
+                  </span>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                  <div className="flex space-x-2">
+                    <button className="gray-400 hover:text-blue-900 cursor-pointer">
+                      <SlEye />
+                    </button>
+                    <button className=" hover:text-green-900 cursor-pointer">
+                      <CiEdit />
+                    </button>
+                    <button className=" hover:text-red-900 cursor-pointer">
+                      <TfiTrash />
                     </button>
                   </div>
                 </td>
@@ -349,12 +379,12 @@ const InventoryDashboard = () => {
         </div>
 
         {/* Add Product Button */}
-        <div className="px-6 py-4 border-t border-gray-200">
+        {/* <div className="px-6 py-4 border-t border-gray-200">
           <button className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-200 ease-in-out transform hover:-translate-y-0.5 shadow-md">
             <FaPlus className="mr-2" />
             Add New Product
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

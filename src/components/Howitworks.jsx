@@ -10,7 +10,7 @@ export default function Howitworks() {
     <div
       className="px-6 py-5"
       data-aos="zoom-in-down"
-      data-aos-delay="500"
+      data-aos-delay="700"
       data-aos-duration="2000"
     >
       <h1 className="text-center font-medium text-xl">How it Works</h1>

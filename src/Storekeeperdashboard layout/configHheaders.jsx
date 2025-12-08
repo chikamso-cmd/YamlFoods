@@ -5,14 +5,26 @@ export const headerConfigs = {
   },
   "/storekeeper/product-management": {
     title: "Product Management",
-    subtitle: "anage your grocery store inventory",
+    subtitle: "Manage your grocery store inventory",
   },
   "/storekeeper/settings": {
     title: "Dashboard Overview",
     subtitle: "Welcome back Here's what happening today",
   },
+  "/storekeeper/my-orders/view-orders": {
+    title: "View Orders",
+    subtitle: "View and manage all customers orders",
+  },
+  "/storekeeper/product-management/add-product": {
+    title: "Add New Product",
+    subtitle: "Manage your grocery store inventory",
+  },
+  "/storekeeper/product-management/bulk-product": {
+    title: "Add Bulk Product",
+    subtitle: "Manage your grocery store bulk inventory",
+  },
 
-  "default": {
+  default: {
     title: "Dashboard Overview",
     subtitle: "Welcome back Here's what happening today",
   },

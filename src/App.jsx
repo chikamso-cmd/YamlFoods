@@ -21,9 +21,16 @@ import Successfulpayment from "./cart & checkout/Successfulpayment";
 import LayoutForStoreKeeper from "./Storekeeperdashboard layout/LayoutForStoreKeeper";
 import DashboardOverview from "./Storekeeper Dashboard/DashboardOverview";
 import Orders from "./Storekeeper Dashboard/Orders";
+import ViewOrders from "./Storekeeper Dashboard/ViewOrders";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; 
+import InventoryDashboard from "./Storekeeper Dashboard/ProductManagement";
+import AddProduct from "./Storekeeper Dashboard/AddProducts";
+import ProductInventory from "./Storekeeper Dashboard/AddBulkProduct";
+import ProductCard from "./Storekeeper Dashboard/Dashboard component/ProductCard";
+import AddBulkProduct from "./Storekeeper Dashboard/AddProductVariant";
+import AddProductBulk from "./Storekeeper Dashboard/BulkProducts";
 
 function App() {
 
@@ -54,7 +61,8 @@ function App() {
         <Route path="/ReviewOrder" element={<ReviewOrder />} />
         <Route path="/PaymentPage" element={<PaymentPage />} />
         <Route path="/Successfulpayment" element={<Successfulpayment />} />
-        {/* <Route path="/storekeeper" element={<LayoutForStoreKeeper />}></Route> */}
+        <Route path="/productcard" element={<ProductCard />} />
+        
 
         {/* Seller dashboard layout */}
         <Route path="/seller" element={<LayoutForSellers />}>
@@ -67,8 +75,18 @@ function App() {
 
         {/* storekeeper dashboard routes */}
         <Route path="/storekeeper" element={<LayoutForStoreKeeper />}>
-        <Route path="store-overview" element={<DashboardOverview />} />
-        <Route path="my-orders" element={<Orders />} />
+          <Route path="store-overview" element={<DashboardOverview />} />
+          <Route path="my-orders" element={<Orders />} />
+          <Route path="my-orders/view-orders" element={<ViewOrders />} />
+          <Route path="product-management" element={<InventoryDashboard />} />
+          <Route path="product-management/bulk-product" element={<ProductInventory />} />
+          <Route path="product-management/bulk-product" element={<ProductInventory />} />
+          <Route path="product-management/add-variants" element={<AddBulkProduct />} />
+          <Route path="product-management/bulkadd" element={<AddProductBulk/>} />
+          <Route
+            path="product-management/add-product"
+            element={<AddProduct />}
+          />
         </Route>
       </Routes>
     </Router>
