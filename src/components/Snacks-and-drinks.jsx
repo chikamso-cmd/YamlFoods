@@ -28,7 +28,7 @@ export default function Snacks_and_drinks() {
       data-aos-delay="400"
       data-aos-duration="2000"
     >
-      <div className="flex items-center justify-between px-5">
+      <div className="flex items-center justify-between px-3">
         <h1 className="text-[12px]">Snacks & Drinks</h1>
         <p className="text-green-600 flex items-center gap-2 text-[10px]">
           See All
@@ -36,7 +36,7 @@ export default function Snacks_and_drinks() {
         </p>
       </div>
       {/* card content */}
-      <div className="card-container">
+      <div className="grid grid-cols-2 lg:grid-cols-6 md:grid-cols-3 mt-5 gap-4">
         <div className=" card bg-white">
           <div className="bg-amber-100 h-[90px] py-5 ">
             <Link to="/Productdetails">
@@ -149,7 +149,7 @@ export default function Snacks_and_drinks() {
           </div>
         </div>
 
-        <div className=" card bg-white">
+        <div className=" card bg-white hidden lg:block md:block">
           <div className="bg-amber-100 h-[90px] py-5 ">
             <Link to="/Productdetails">
               <img
@@ -177,7 +177,7 @@ export default function Snacks_and_drinks() {
           </div>
         </div>
 
-        <div className=" card bg-white">
+        <div className=" card bg-white hidden lg:block md:block">
           <div className="bg-amber-100 h-[90px] py-5 ">
             <Link to="/Productdetails">
               <img
@@ -187,7 +187,7 @@ export default function Snacks_and_drinks() {
               />
             </Link>
           </div>
-          <div className="px-1">
+          <div className="px-1 hidden">
             <h1 className="text-[10px] pt-1">Commando</h1>
             <p className="text-[10px] font-bold">#3,500</p>
             <div

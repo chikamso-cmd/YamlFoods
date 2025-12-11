@@ -8,7 +8,7 @@ export default function RecentlyViewed() {
   return (
     <div>
       <div
-        className="flex gap-6 mt-4"
+        className="flex flex-wrap gap-6 mt-4"
         data-aos="fade-up"
         data-aos-delay="500"
         data-aos-duration="2000"

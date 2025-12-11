@@ -2,7 +2,7 @@
 import { Outlet } from "react-router-dom";
 import SellerdashbordHeader from "./SellerdashbordHeader";
 import SellerdashboardSidebar from "./SellerdashboardSidebar";
-// import { getHeaderConfig } from "./configHheaders";
+import MobileFooter from "./MobileFooter";
 
 
 export default function LayoutForStoreKeeper() {
@@ -12,7 +12,7 @@ export default function LayoutForStoreKeeper() {
 
   return (
     <section className="w-full bg-green-50 flex  ">
-      <aside className=" w-60 shadow-cyan-50 rounded">
+      <aside className=" lg:block md:block hidden  shadow-cyan-50 rounded">
         <SellerdashboardSidebar />
       </aside>
 
@@ -24,6 +24,9 @@ export default function LayoutForStoreKeeper() {
         <main className="flex-1 w-full px-5 py-6 ">
           <Outlet />
         </main>
+        <div>
+          <MobileFooter />
+        </div>
       </div>
     </section>
   );

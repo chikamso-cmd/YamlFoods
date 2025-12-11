@@ -34,16 +34,18 @@ const closeModal = () => {
       data-aos-delay="300"
       data-aos-duration="1000"
     >
-      <div className="flex items-center justify-between px-5">
-        <h1 className="text-[12px]">Vegitables & Fruits</h1>
-        <p className="text-green-600 flex items-center gap-2 text-[10px]">
-          See All
-          <FaChevronRight />
-        </p>
+      <div className="px-5  ">
+        <div className="flex items-center justify-between">
+          <h1 className="text-[12px]">Vegitables & Fruits</h1>
+          <p className="text-green-600 flex items-center gap-2 text-[10px]">
+            See All
+            <FaChevronRight />
+          </p>
+        </div>
       </div>
       {/* card content */}
-      <div className="card-container">
-        <div className=" card bg-white">
+      <div className="card-container grid grid-cols-2  gap-4 mt-5 lg:grid-cols-6 md:grid-cols-3  ">
+        <div className=" car ">
           <div className="bg-amber-100 h-[90px] py-5 ">
             <Link to="/Productdetails">
               <img
@@ -159,7 +161,7 @@ const closeModal = () => {
           </div>
         </div>
 
-        <div className=" card bg-white">
+        <div className=" card bg-white hidden lg:block md:block">
           <div className="bg-amber-100 h-[90px] py-5 ">
             <Link to="/Productdetails">
               <img
@@ -188,7 +190,7 @@ const closeModal = () => {
           </div>
         </div>
 
-        <div className=" card bg-white">
+        <div className=" card bg-white hidden lg:block md:block">
           <div className="bg-amber-100 h-[90px] py-5 ">
             <Link to="/Productdetails">
               <img

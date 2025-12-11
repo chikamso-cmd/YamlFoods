@@ -6,7 +6,7 @@ export default function OrderSummary() {
   return (
    <>
             {/* Order Summary */}
-            <div className="w-80 bg-white shadow p-4 rounded-lg h-fit">
+            <div className="w-full lg:w-80 bg-white shadow p-4 rounded-lg h-fit">
               <div className="font-semibold mb-4 text-[11px]">
                 Order Summary
               </div>

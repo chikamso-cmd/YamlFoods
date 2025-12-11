@@ -108,9 +108,9 @@ const DeliveryInfo = () => (
 );
 
 const DescriptionSection = ({ description }) => (
-  <div className="mt-10">
-    <h2 className="text-lg font-semibold text-green-600 mb-2">Description</h2>
-    <div className="bg-white shadow p-6 rounded-lg text-sm leading-relaxed text-gray-700">
+  <div className="mt-10 mb-4">
+    <h2 className=" border-b w-25 pb-3 text-lg font-semibold text-green-600 mb-2">Description</h2>
+    <div className=" lg:p-4 md:-4 rounded-lg text-sm leading-relaxed text-gray-700">
       <h3 className="font-semibold mb-2">Product description</h3>
       <p>{description}</p>
     </div>

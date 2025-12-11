@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import tomatoes from "../assets/tomatoes.png";
 import bellpepper from "../assets/bellpepper.png";
 import RecentlyViewed from "../components/RecentlyViewed";
+import Footer from "../Layout/Footer";
 
 export default function CartPage() {
   const [count, setCount] = useState(0);
@@ -21,9 +22,13 @@ export default function CartPage() {
     <div className="w-full bg-gray-50 min-h-screen font-sans">
       {/* Top Bar */}
       <div className="w-full bg-[#f8f0d6] text-sm py-2 px-6 flex justify-between">
-        <span>Delivery within 24 hours</span>
-        <span>Operates in Anambra and Awka for now</span>
-        <div className="flex gap-4">
+        <span className="text-[10px] lg:text-xl md:text-sm">
+          Delivery within 24 hours
+        </span>
+        <span className="text-[10px] lg:text-xl md:text-sm">
+          Operates in Anambra and Awka for now
+        </span>
+        <div className=" gap-4 hidden  lg:flex md:flex">
           <span>24/7 Support</span>
           <span>Secure Payment</span>
         </div>
@@ -49,7 +54,7 @@ export default function CartPage() {
 
       {/* Main Content */}
       <div
-        className="px-8 flex gap-8"
+        className="px-8 flex w-full flex-wrap gap-8"
         data-aos="fade-up"
         data-aos-delay="300"
         data-aos-duration="1000"
@@ -116,37 +121,37 @@ export default function CartPage() {
             </div>
           </div>
 
-          {/* Recently Viewed */}
-          <div className="mt-8 font-semibold text-lg">Recently Viewed</div>
-          <RecentlyViewed />
+          {/* Order Summary */}
+          <div className="w-full mt-5 bg-white shadow p-4 rounded-lg h-fit">
+            <div className="font-semibold mb-4 text-lg">Order Summary</div>
+            <div className="flex justify-between py-2 text-sm">
+              <span>Subtotal</span>
+              <span>₦7,000</span>
+            </div>
+            <div className="flex justify-between py-2 text-sm">
+              <span>Discount</span>
+              <span>₦0</span>
+            </div>
+            <hr className="my-3" />
+            <div className="flex justify-between font-semibold text-lg py-2">
+              <span>Total</span>
+              <span>₦7,000</span>
+            </div>
+            <Link to="/Checkout">
+              <button className="bg-green-600 text-white w-full py-2 rounded mt-3 cursor-pointer">
+                Proceed to Checkout
+              </button>
+            </Link>
+          </div>
         </div>
 
-        {/* Order Summary */}
-        <div className="w-80 bg-white shadow p-4 rounded-lg h-fit">
-          <div className="font-semibold mb-4 text-lg">Order Summary</div>
-          <div className="flex justify-between py-2 text-sm">
-            <span>Subtotal</span>
-            <span>₦7,000</span>
-          </div>
-          <div className="flex justify-between py-2 text-sm">
-            <span>Discount</span>
-            <span>₦0</span>
-          </div>
-          <hr className="my-3" />
-          <div className="flex justify-between font-semibold text-lg py-2">
-            <span>Total</span>
-            <span>₦7,000</span>
-          </div>
-          <Link to="/Checkout">
-            <button className="bg-green-600 text-white w-full py-2 rounded mt-3 cursor-pointer">
-              Proceed to Checkout
-            </button>
-          </Link>
-        </div>
+        {/* Recently Viewed */}
+        <div className="mt-8 font-semibold text-lg">Recently Viewed</div>
+        <RecentlyViewed />
       </div>
 
       {/* Footer */}
-      <div className="bg-green-900 text-white mt-12 p-10 grid grid-cols-4 gap-6">
+      {/* <div className="bg-green-900 text-white mt-12 p-10 grid grid-cols-4 gap-6">
         <div>
           <div className="text-xl font-bold mb-2">LOGO</div>
           <p className="text-sm">
@@ -182,7 +187,8 @@ export default function CartPage() {
 
       <div className="text-center text-xs py-4 text-gray-400">
         © 2025 FreshMart. All rights reserved.
-      </div>
+      </div> */}
+      <Footer />
     </div>
   );
 }

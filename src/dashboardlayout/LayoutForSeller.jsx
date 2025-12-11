@@ -10,12 +10,12 @@ export default function LayoutForSellers() {
       <DashbordNav />
       <UserProfile />
 
-      <div className="flex gap-4">
-        <div className="w-64">
+      <div className="flex lg:gap-4 ">
+        <div className="lg:w-64 md:w-64">
           <DashboardSidebar />
         </div>
 
-        <div className="flex-1 w-full">
+        <div className="lg:flex-1 w-full">
           <Outlet />
         </div>
       </div>

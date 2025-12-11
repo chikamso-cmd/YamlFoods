@@ -23,6 +23,10 @@ export const headerConfigs = {
     title: "Add Bulk Product",
     subtitle: "Manage your grocery store bulk inventory",
   },
+  "/storekeeper/product-management/bulkadd": {
+    title: "Add Bulk Product",
+    subtitle: "Manage your grocery store bulk inventory",
+  },
 
   default: {
     title: "Dashboard Overview",

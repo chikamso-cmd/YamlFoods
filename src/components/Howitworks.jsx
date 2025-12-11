@@ -8,14 +8,14 @@ import basket from "../assets/basket.png";
 export default function Howitworks() {
   return (
     <div
-      className="px-6 py-5"
+      className=" py-5"
       data-aos="zoom-in-down"
       data-aos-delay="700"
       data-aos-duration="2000"
     >
       <h1 className="text-center font-medium text-xl">How it Works</h1>
-      <div className="flex items-center justify-between py-4 mt-5 mx-9">
-        <div className="w-[180px] h-[150px] text-center">
+      <div className="lg:flex  md:flex items-center justify-between py-4 mt-5 ">
+        <div className=" text-center bg-green-100 lg:bg-transparent md:bg-transparent px-3 py-4 rounded-xl mb-4">
           <div className="rounded-full mx-auto w-10 h-10 pt-2 ">
             <img src={basket} alt="icon" className="mx-auto" />
           </div>
@@ -27,8 +27,12 @@ export default function Howitworks() {
           </p>
         </div>
         {/* <FaLongArrowAltRight className=" text-4xl text-gray-300" /> */}
-        <img src={arrow} alt="arrow" className="w-[10%]" />
-        <div className="w-[180px] h-[150px] text-center">
+        <img
+          src={arrow}
+          alt="arrow"
+          className="w-[10%] hidden lg:block md:block"
+        />
+        <div className="text-center bg-blue-100 lg:bg-transparent md:bg-transparent px-3 py-4 rounded-xl mb-4">
           <div className="rounded-full mx-auto w-10 h-10 pt-2 ">
             <img src={card} alt="icon" className="mx-auto" />
           </div>
@@ -40,8 +44,12 @@ export default function Howitworks() {
           </p>
         </div>
         {/* <FaLongArrowAltRight className=" text-4xl text-gray-300" /> */}
-        <img src={arrow} alt="arrow" className="w-[10%]" />
-        <div className="w-[180px] h-[150px] text-center">
+        <img
+          src={arrow}
+          alt="arrow"
+          className="w-[10%] lg:block md:block hidden"
+        />
+        <div className="text-center bg-amber-100 lg:bg-transparent md:bg-transparent px-3 py-4 rounded-xl">
           <div className="rounded-full mx-auto w-10 h-10 pt-2 ">
             <img src={bus} alt="icon" className="mx-auto" />
           </div>

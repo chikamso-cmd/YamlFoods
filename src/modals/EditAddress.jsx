@@ -8,17 +8,17 @@ const DeliveryAddress = ({ isOpen, onClose }) => {
   return (
     // MODAL BACKDROP
     <div
-      className="fixed inset-0 bg-black/40 flex items-center justify-center z-40"
+      className="fixed top-0 left-0 bg-black/40 flex items-center justify-center z-40 w-full h-screen"
       // close when clicking backdrop
     >
       {/* MODAL BODY */}
-      <div className="w-[60%]  max-w-4xl bg-white rounded-xl shadow-sm p-8 border border-gray-200 relative z-50 overflow-y-auto">
+      <div className="lg:w-[60%] w-90  max-w-4xl bg-white rounded-xl shadow-sm p-8 border border-gray-200 relative z-50 overflow-y-auto">
         {/* Header */}
         <div className="flex items-center justify-center mb-5">
           <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-2">
             {/* close btn */}
             <LiaTimesSolid
-              className="fixed right-80 font-bold cursor-pointer "
+              className="absolute top-4 right-4 font-bold cursor-pointer z-50"
               onClick={onClose}
             />
             <MapPin className="text-green-600" size={20} />

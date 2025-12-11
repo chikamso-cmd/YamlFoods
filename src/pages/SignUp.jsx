@@ -34,10 +34,14 @@ function SignUp() {
       <div className="w-full">
         {/* Top navigation bar */}
         <div className="bg-[#f5f1e4] py-2 px-5 flex justify-between text-xs">
-          <span>Delivery within 24 hours</span>
-          <span>Operates in Anambra and Awka for now</span>
-          <span>24/7 Support</span>
-          <span>Secure Payment</span>
+          <span className="text-[10px] md:text-sm lg:text-2xl">
+            Delivery within 24 hours
+          </span>
+          <span className="text-[10px] md:text-sm lg:text-2xl">
+            Operates in Arambra and Awka for now
+          </span>
+          <span className="hidden md:block lg:block">24/7 Support</span>
+          <span className="hidden md:block lg:block">Secure Payment</span>
         </div>
 
         {/* Logo section */}

@@ -11,11 +11,23 @@
   --color-special-offer-background: linear-Gradient(to right, #ff9900, #cc4b00);
   --color-footer-background-800: #1f4720;
 }
-.slide1 {
-  background: linear-Gradient(to right, #664e00, #ffcf33);
+.slider {
   height: 18rem;
+  background-image:
+    linear-gradient(to right, #664e00, #ffcf33);                       
+  background-position: right center;   
+  background-size: contain cover;
+  background-repeat: no-repeat;
 }
-.slide2 {
+/* .slide1 {
+  height: 18rem;
+  background-image: url(/src/assets/bulk.png);                       
+  background-position: right center;   
+  background-size: contain cover;
+  background-repeat: no-repeat;
+} */
+
+.slider2 {
   background: linear-Gradient(to right, #4caf4f, #204921);
   height: 18rem;
 }
@@ -23,17 +35,17 @@
 .bulkdeals {
   font-weight: 200;
 }
-.card-container {
+/* .card-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.card {
+} */
+/* .card {
   flex: 1;
   width: 20rem;
   height: 180px;
   margin: 0.7rem;
-}
+} */
 .bulk{
  
   background: linear-Gradient(to right, #204921,  #ffcf33 ); 

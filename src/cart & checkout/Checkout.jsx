@@ -32,14 +32,14 @@ export default function Checkout() {
 
       {/* main content */}
       <div
-        className="w-full px-6 py-5"
+        className="w-full px-2 py-5"
         data-aos="slide-up"
         data-aos-delay="500"
         data-aos-duration="4000"
       >
         <div className="px-8">
           {/* Checkout Items */}
-          <div className="flex gap-7">
+          <div className="flex gap-4 flex-col lg:flex-row ">
             <div className="shadow-lg p-4 rounded-lg bg-white flex-1">
               <Link
                 to="/Cart"
@@ -68,7 +68,7 @@ export default function Checkout() {
               <form className="w-full px-2 py-3">
                 <div className="px-2">
                   {/* form inputs/ username */}
-                  <div className="flex items-center w-full gap-1 py-2">
+                  <div className="block md:flex lg:flex items-center w-full gap-1 py-2">
                     <div className="block flex-1">
                       <label className="text-[10px] font-medium">
                         First Name
@@ -96,7 +96,7 @@ export default function Checkout() {
                   </div>
 
                   {/* form inputs/ phone & email */}
-                  <div className="flex items-center w-full gap-1 pb-3">
+                  <div className="block md:flex lg:flex items-center w-full gap-1 pb-3">
                     <div className="block flex-1">
                       <label className="text-[10px] font-medium">
                         Phone Number{" "}
@@ -122,7 +122,7 @@ export default function Checkout() {
                   </div>
 
                   {/* form inputs/ city & state */}
-                  <div className="flex items-center w-full gap-4 pb-1">
+                  <div className="block md:flex lg:flex items-center w-full gap-4 pb-1">
                     <div className="block flex-1">
                       <label className="text-[10px] font-medium">City </label>
                       <input

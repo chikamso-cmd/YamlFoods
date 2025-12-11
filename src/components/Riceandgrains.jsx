@@ -36,7 +36,7 @@ export default function Riceandgrains() {
         </p>
       </div>
       {/* card content */}
-      <div className="card-container">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-4">
         <div className=" card bg-white">
           <div className="bg-amber-100 h-[90px] py-5 ">
             <img
@@ -141,7 +141,7 @@ export default function Riceandgrains() {
           </div>
         </div>
 
-        <div className=" card bg-white">
+        <div className=" card bg-white hidden lg:block md:block">
           <div className="bg-amber-100 h-[90px] py-5 ">
             <img
               src={bellpepper}
@@ -167,7 +167,7 @@ export default function Riceandgrains() {
           </div>
         </div>
 
-        <div className=" card bg-white">
+        <div className=" card bg-white hidden lg:block md:block">
           <div className="bg-amber-100 h-[90px] py-5 ">
             <img
               src={Cabbage}

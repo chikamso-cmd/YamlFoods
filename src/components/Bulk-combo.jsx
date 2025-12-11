@@ -5,7 +5,7 @@ import bulkcard from "../assets/bulk_card.png";
 export default function Bulk_combo() {
   return (
     <div
-      className="px-5 py-6"
+      className="px-3 py-6"
       data-aos="fade-up"
       data-aos-delay="300"
       data-aos-duration="1000"
@@ -17,9 +17,9 @@ export default function Bulk_combo() {
           <FaChevronRight />
         </p>
       </div>
-      <div className="flex items-center gap-4  ">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4  ">
         <div className="my-3">
-          <div className="bg-white w-[150px] h-[182px] shadow-xl p-1 rounded">
+          <div className="bg-white  h- shadow-xl p-1 rounded">
             <img src={bulkcard} alt="variety of products" />
             <div>
               <h1 className="text-[12px] py-0.5">Naija Essential Pack</h1>
@@ -38,7 +38,7 @@ export default function Bulk_combo() {
         </div>
 
         <div className="my-3">
-          <div className="bg-white w-[150px] h-[182px] shadow-xl p-1 rounded">
+          <div className="bg-white  shadow-xl p-1 rounded">
             <img src={bulkcard} alt="variety of products" />
             <div>
               <h1 className="text-[12px] py-0.5">Naija Essential Pack</h1>
@@ -57,7 +57,7 @@ export default function Bulk_combo() {
         </div>
 
         <div className="my-3">
-          <div className="bg-white w-[150px] h-[182px] shadow-xl p-1 rounded">
+          <div className="bg-white shadow-xl p-1 rounded">
             <img src={bulkcard} alt="variety of products" />
             <div>
               <h1 className="text-[12px] py-0.5">Naija Essential Pack</h1>
@@ -76,7 +76,7 @@ export default function Bulk_combo() {
         </div>
 
         <div className="my-3">
-          <div className="bg-white w-[150px] h-[182px] shadow-xl p-1 rounded">
+          <div className="bg-white  shadow-xl p-1 rounded">
             <img src={bulkcard} alt="variety of products" />
             <div>
               <h1 className="text-[12px] py-0.5">Naija Essential Pack</h1>
@@ -94,8 +94,8 @@ export default function Bulk_combo() {
           </div>
         </div>
 
-        <div className="my-3">
-          <div className="bg-white w-[150px] h-[182px] shadow-xl p-1 rounded">
+        <div className="my-3 hidden lg:block md:block">
+          <div className="bg-white  shadow-xl p-1 rounded">
             <img src={bulkcard} alt="variety of products" />
             <div>
               <h1 className="text-[12px] py-0.5">Naija Essential Pack</h1>
@@ -113,27 +113,8 @@ export default function Bulk_combo() {
           </div>
         </div>
 
-        <div className="my-3">
-          <div className="bg-white w-[150px] h-[182px] shadow-xl p-1 rounded">
-            <img src={bulkcard} alt="variety of products" />
-            <div>
-              <h1 className="text-[12px] py-0.5">Naija Essential Pack</h1>
-              <p className="text-[8px] pb-0.5">
-                Rice + beans + maggi + palm oil - everything you need for the
-                month
-              </p>
-              <div className="flex items-center justify-between mt-2">
-                <p className="text-[10px] font-bold">$25,000</p>
-                <button className="bg-amber-500 text-white text-[10px] px-2 rounded py-0.5">
-                  Add to Basket
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="my-3">
-          <div className="bg-white w-[150px] h-[182px] shadow-xl p-1 rounded">
+        <div className="my-3 hidden lg:block md:block">
+          <div className="bg-white  shadow-xl p-1 rounded">
             <img src={bulkcard} alt="variety of products" />
             <div>
               <h1 className="text-[12px] py-0.5">Naija Essential Pack</h1>

@@ -6,9 +6,9 @@ export default function CheckoutNav() {
   return (
     <div className="w-full">
       <div className="w-full bg-[#f8f0d6] text-sm py-2 px-6 flex justify-between">
-        <span>Delivery within 24 hours</span>
-        <span>Operates in Anambra and Awka for now</span>
-        <div className="flex gap-4">
+        <span className='text-[10px] lg:text-xl md:text-sm'>Delivery within 24 hours</span>
+        <span className='text-[10px] lg:text-xl md:text-sm'>Operates in Anambra and Awka for now</span>
+        <div className=" gap-4 hidden lg:flex md:flex">
           <span>24/7 Support</span>
           <span>Secure Payment</span>
         </div>

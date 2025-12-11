@@ -8,7 +8,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function DashboardSidebar() {
   return (
-    <div className="w-full border border-gray-100 shadow-cyan-50 rounded h-full px-2 py-3 text-center">
+    <div className="hidden md:block lg:block w-full border border-gray-100 shadow-cyan-50 rounded h-full px-2 py-3 text-center">
       <nav className="py-9 text-[13px] font-semibold text-center">
         <ul className="justify-center px-9">
           <NavLink

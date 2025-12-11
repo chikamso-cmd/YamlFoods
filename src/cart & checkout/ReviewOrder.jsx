@@ -29,7 +29,7 @@ export default function ReviewOrder() {
 
       {/* main content */}
       <div
-        className="w-full px-6 py-5"
+        className="w-full lg:px-3 md:px-3 py-5"
         data-aos="zoom-in-right"
         data-aos-easing="ease-oup"
         data-aos-delay="300"
@@ -37,7 +37,7 @@ export default function ReviewOrder() {
       >
         <div className="px-8">
           {/* Checkout Items */}
-          <div className="flex gap-7">
+          <div className="flex flex-col lg:flex-row gap-7">
             <div className="shadow-lg p-4 rounded-lg bg-white flex-1">
               <Link
                 to="/Cart"
@@ -217,12 +217,12 @@ export default function ReviewOrder() {
                     </div>
                   </div>
 
-                  <div className="flex w-full gap-4 my-3 items-center ">
+                  <div className="grid grid-cols-2 w-full gap-4 my-3  justify-end lg:justify-center ">
                     <button className="cursor-pointer text-green-500 border border-green-500 px-3 py-1 text-[10px] rounded hover:bg-green-500 hover:text-white duration-500 ">
                       Back
                     </button>
                     <Link to="/ReviewOrder" className="w-full">
-                      <button className="bg-green-600 text-white px-4 w-full rounded text-[12px] py-1 cursor-pointer hover:bg-green-700 duration-500">
+                      <button className="bg-green-600 text-white px-4  lg-w-full rounded text-[12px] py-1 cursor-pointer hover:bg-green-700 duration-500">
                         Save and Review Order
                       </button>
                     </Link>

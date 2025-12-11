@@ -5,7 +5,7 @@ const PaymentSection = () => {
   return (
     <>
       {/* Order Summary */}
-      <div className="w-80 bg-white shadow p-4 rounded-lg h-fit">
+      <div className="w-full lg:w-80 bg-white shadow p-4 rounded-lg h-fit">
         <div className="font-semibold mb-4 text-[11px] border-b border-gray-200 py-2">
           Order Summary
         </div>

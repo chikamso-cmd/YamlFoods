@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoMdSearch } from "react-icons/io";
-import { IoBasketOutline } from "react-icons/io5";
+import { IoBasketOutline, IoCloseOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
+import { RxHamburgerMenu } from "react-icons/rx";
 import Logo from "../assets/LOGO.png";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
+  const [isOpen, setisOpen] = useState(false);
+
   return (
     <div className="w-full  ">
       <div className="flex justify-between font-medium bg-[#fff8e1] px-8 py-6 text-[10px] text-[#663d00] sm:text-[12px]  ">
@@ -17,12 +20,15 @@ export default function Navbar() {
         </div>
       </div>
       <div className="flex justify-between items-center px-8 py-7 lg:w-full">
-        <img
-          className="w-[6%] sm:w-[5%] h-[6%] lg:w-[4%]"
-          src={Logo}
-          alt="company-logo"
-        />
-        <div className="flex items-center gap-1">
+        <Link to="/">
+          <img
+            className="w-[20%] sm:w-[20%] md:w-50 lg:w-[20%] cursor-pointer"
+            src={Logo}
+            alt="company-logo"
+          />
+        </Link>
+        {/* select btn */}
+        <div className=" hidden lg:flex items-center gap-1">
           <select
             className="bg-green-700 text-white py-1.5 px-3 rounded text-[10px]"
             name=""
@@ -47,7 +53,7 @@ export default function Navbar() {
             placeholder="search"
           />
         </div>
-        <div className="flex items-center justify-between gap-4 text-[10px] ">
+        <div className=" hidden lg:flex items-center justify-between gap-4 text-[10px] ">
           <button className="text-[10px] bg-[#4CAF4F] rounded text-white px-4 py-1 cursor-pointer hover:bg-green-600 duration-400">
             Install App
           </button>
@@ -65,6 +71,71 @@ export default function Navbar() {
               My Basket
             </button>
           </Link>
+        </div>
+
+        <div>
+          {/* Sidebar */}
+          {isOpen && (
+            <div className="px-6 py-5 fixed top-0 left-0 bg-black/80 backdrop-blur-sm h-full z-50 w-70 lg:hidden md:hidden overflow-y-auto">
+              <Link to="/">
+                <img
+                  className="w-[60%] cursor-pointer mb-5"
+                  src={Logo}
+                  alt="company-logo"
+                />
+              </Link>
+
+              <select className="bg-green-700 w-full text-white py-1.5 px-3 mb-3 rounded text-[10px]">
+                <option className="bg-white text-green-700" value="anambra">
+                  Anambra
+                </option>
+                <option className="bg-white text-green-700" value="awka">
+                  Awka
+                </option>
+              </select>
+
+              <input
+                className="border rounded px-2 py-1 text-white capitalize text-[14px] w-full border-white placeholder:text-[10px] mb-3"
+                type="search"
+                placeholder="search"
+              />
+
+              <div className="text-[10px] lg:hidden md:hidden">
+                <button className="text-[10px] bg-[#358b38] rounded text-white px-4 py-2 cursor-pointer hover:bg-green-600 duration-400 w-full mb-3">
+                  Install App
+                </button>
+
+                <Link to="/signin">
+                  <button className="text-green-500 text-sm flex items-center gap-1 cursor-pointer mb-2 mt-2">
+                    <FaRegUser className="text-sm" />
+                    Login
+                  </button>
+                </Link>
+
+                <Link to="/Cart">
+                  <button className="flex text-white items-center gap-1 cursor-pointer text-sm">
+                    <IoBasketOutline className="text-sm text-[#ff9900]" />
+                    My Basket
+                  </button>
+                </Link>
+              </div>
+            </div>
+          )}
+
+          {/* Hamburger / Close button */}
+          {!isOpen ? (
+            <RxHamburgerMenu
+              size={30}
+              className="cursor-pointer lg:hidden md:hidden"
+              onClick={() => setisOpen(true)}
+            />
+          ) : (
+            <IoCloseOutline
+              size={30}
+              className="cursor-pointer lg:hidden md:hidden"
+              onClick={() => setisOpen(false)}
+            />
+          )}
         </div>
       </div>
     </div>

@@ -1,10 +1,18 @@
 import React from "react";
 import { Upload } from "lucide-react";
+import { NavLink } from "react-router-dom";
+import { PiCaretLeftLight } from "react-icons/pi";
 
 export default function AddProductBulk() {
   return (
     <div className="w-full min-h-screen p-4 md:p-6 bg-[#F4FBF4]">
       <div className="max-w-[1200px] mx-auto bg-white rounded-xl border border-gray-200 p-6 md:p-8">
+        <NavLink to="/storekeeper/product-management/bulk-product">
+          <button className="flex items-center gap-2 cursor-pointer text-[12px] mb-3">
+            <PiCaretLeftLight />
+            Back
+          </button>
+        </NavLink>
         {/* Title */}
         <h1 className="text-[20px] font-semibold text-gray-800">
           Add New Product
@@ -58,6 +66,10 @@ export default function AddProductBulk() {
                            bg-white focus:outline-none"
               >
                 <option>Select products</option>
+                <option>Rice 1kG</option>
+                <option>Beans 1KG</option>
+                <option>Power Oil 1Litre</option>
+                <option>Palm Oli 75cl</option>
               </select>
 
               {/* Dropdown arrow */}

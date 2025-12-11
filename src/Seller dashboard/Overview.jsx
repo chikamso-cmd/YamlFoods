@@ -1,10 +1,9 @@
 import React from "react";
-import DashboardNav from "../Seller dashboard/DashbordNav";
-import UserProfile from "../Seller dashboard/UserProfile";
-import DashboardSidebar from "./DashboardSidebar";
-import { BsBoxSeam } from "react-icons/bs";
-import { BsCreditCard2Back } from "react-icons/bs";
+import { BsCreditCard2Back, BsBoxSeam } from "react-icons/bs";
 import { PiCaretLeftBold } from "react-icons/pi";
+import { TbHome2 } from "react-icons/tb";
+import { IoLocationOutline, IoSettingsOutline } from "react-icons/io5";
+import MobileFooter from '../Seller dashboard/MobileFooter'
 
 const Dashboard = () => {
   return (
@@ -13,9 +12,7 @@ const Dashboard = () => {
       <header className="bg-white shadow flex justify-between items-center w-full">
         {/* <DashboardNav /> */}
       </header>
-      <div>
-        {/* <UserProfile /> */}
-      </div>
+      <div>{/* <UserProfile /> */}</div>
 
       <div className="flex gap-5">
         {/* Sidebar */}
@@ -24,16 +21,23 @@ const Dashboard = () => {
         </aside> */}
 
         {/* Main Panel */}
-        <main className="flex-1 p-4 border-l border-gray-200">
-          <h1 className="text-xl font-bold mb-2">Welcome back, John! 👋</h1>
-          <p className="text-gray-600 mb-6 text-[12px]">
+        <main
+          className="flex-1 p-4 border-l border-gray-200"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+        >
+          <h1 className=" hidden md:block lg:block text-xl font-bold mb-2">
+            Welcome back, John! 👋
+          </h1>
+          <p className=" hidden md:block lg:block text-gray-600 mb-6 text-[12px]">
             Here's what's happening with your account today
           </p>
 
           {/* Summary Boxes */}
-          <div className="grid grid-cols-2 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-8">
             <div className="bg-white border-gray-200 border rounded p-6 flex items-center gap-3">
-              <div className="bg-amber-100 text-amber-500 w-[30px] h-[30px] flex items-center justify-center rounded ">
+              <div className="bg-amber-500 md:bg-amber-100  md:text-amber-600 lg:bg-amber-100  lg:text-amber-600 text-white w-[30px] h-[30px] flex items-center justify-center rounded ">
                 <BsBoxSeam />
               </div>
               <div>
@@ -42,7 +46,7 @@ const Dashboard = () => {
               </div>
             </div>
             <div className="bg-white border border-gray-200 rounded shadowrounded p-6 flex items-center gap-3">
-              <div className="bg-green-100 text-green-500 w-[30px] h-[30px] flex items-center justify-center rounded ">
+              <div className="bg-green-600 text-white w-[30px] h-[30px] flex items-center justify-center rounded md:bg-green-100  md:text-green-600 lg:bg-green-100  lg:text-green-600">
                 <BsCreditCard2Back />
               </div>
               <div>
@@ -56,7 +60,7 @@ const Dashboard = () => {
           <div className="bg-white border border-gray-200 rounded p-6 mb-8">
             <div className="flex justify-between items-center border-b border-gray-200 mb-4">
               <h2 className="text-sm font-semibold mb-4">Recent Orders</h2>
-              <button className="text-green-600 flex gap-1 text-[12px] items-center cursor-pointer hover:underline duration-500">
+              <button className="text-green-600 flex gap-1 text-[12px] items-center cursor-pointer bg-green-50 rounded-full px-4 py-0.5 hover:underline duration-500">
                 View All <PiCaretLeftBold className="rotate-180" />
               </button>
             </div>
@@ -154,6 +158,8 @@ const Dashboard = () => {
           Shop Now
         </button>
       </div>
+      {/* footer for nmobile screens */}
+      <MobileFooter />
     </div>
   );
 };

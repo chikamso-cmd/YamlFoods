@@ -5,13 +5,48 @@ import { FaRegEye } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa";
 
 function SignIn() {
+  const Navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [emailError, setEmailError] = useState("");
+  const [passworderror, setPasswordError] = useState ('')
+
+  const showError = (msg) => {
+    
+    if (!email) {
+      setEmailError(msg);
+    }
+    if (!password) {
+      setPasswordError(msg);
+    }
+
+    setTimeout(() => {
+      setEmailError("");
+      setPasswordError('');
+    }, 3000);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle sign in logic here
+   console.log('btn clicked', email, password)
+
+if (!email) {
+  console.log("you need to fill all input fields");
+  setTimeout(() => {
+    setEmailError("");
+    setPasswordError("");
+  }, 3000);
+    showError("This field cannot be empty");
+}  else if(!password){
+ console.log("password cannot be empty");
+ showError("passowrd cannot be empty");
+}else{
+  showError('')
+  console.log('welcome back user');
+  Navigate('/seller/overview')
+}
    
   };
 
@@ -20,10 +55,10 @@ function SignIn() {
       <div className="w-full">
         {/* Top navigation bar */}
         <div className="bg-[#f5f1e4] py-2 px-5 flex justify-between text-xs">
-          <span>Delivery within 24 hours</span>
-          <span>Operates in Arambra and Awka for now</span>
-          <span>24/7 Support</span>
-          <span>Secure Payment</span>
+          <span className="text-[10px] md:text-sm lg:text-2xl">Delivery within 24 hours</span>
+          <span className="text-[10px] md:text-sm lg:text-2xl">Operates in Arambra and Awka for now</span>
+          <span className="hidden md:block lg:block">24/7 Support</span>
+          <span className="hidden md:block lg:block">Secure Payment</span>
         </div>
 
         {/* Logo section */}
@@ -68,9 +103,11 @@ function SignIn() {
                 placeholder="Example@gmail.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                required
+                
                 className="w-full p-2.5 border border-gray-300 rounded-md text-sm"
               />
+             {emailError && <p className="text-red-600 text-[9px] mt-1 px-2">{emailError}</p>}
+              
             </div>
 
             {/* Password field */}
@@ -93,9 +130,10 @@ function SignIn() {
                   placeholder="Enter Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  required
+                
                   className="w-full p-2.5 border border-gray-300 rounded-md text-sm"
                 />
+                {passworderror && <p className="text-red-600 text-[9px] mt-1 px-2">{passworderror}</p>}
                 <button
                   type="button"
                   className="absolute right-2.5 top-1/2 transform -translate-y-1/2 bg-transparent border-none cursor-pointer text-gray-500"

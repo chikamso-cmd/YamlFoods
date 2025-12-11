@@ -48,9 +48,9 @@ export default function Checkout() {
         data-aos-delay="400"
         data-aos-duration="2000"
       >
-        <div className="px-8">
+        <div className="lg:px-4 md:px-4">
           {/* Checkout Items */}
-          <div className="flex gap-7">
+          <div className="flex  flex-col lg:flex-row  gap-7">
             <div className="shadow-lg p-4 rounded-lg bg-white flex-1">
               <h1 className="text-gray-700 font-semibold text-sm px-3 block">
                 Payment

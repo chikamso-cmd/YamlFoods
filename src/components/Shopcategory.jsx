@@ -24,8 +24,8 @@ export default function Shopcategory() {
         data-aos-duration="1000"
       >
         <h1 className="text-xl text-center font-medium">Shop by Category</h1>
-        <div className=" flex justify-between w-full px-6 py-10 gap-3 ">
-          <div className="bg-[#EDF7EE] p-2 w-[200px] rounded-2xl text-center">
+        <div className=" flex justify-between w-full  py-10 gap-3 overflow-x-scroll px-5 scrollbar-hide md:flex-wrap lg:flex-nowrap sm:flex-wrap ">
+          <div className="flex-none bg-[#EDF7EE] p-2 w-[200px] md:w-[200px] lg:w-[200px] rounded-2xl text-center">
             <img
               className="w-10 block mx-auto py-1"
               src={leaf}
@@ -34,7 +34,7 @@ export default function Shopcategory() {
             <h4 className="text-[10px] py-2 font-bold">Vegitables & Fruits</h4>
           </div>
 
-          <div className="bg-[#FFF3CC] p-2 w-[200px] rounded-2xl text-center">
+          <div className="flex-none bg-[#FFF3CC] p-2 w-[200px] rounded-2xl text-center">
             <img
               className="w-10 justify-center block mx-auto py-1"
               src={rice}
@@ -43,7 +43,7 @@ export default function Shopcategory() {
             <h4 className="text-[10px] py-2 font-bold">Grains & Rice</h4>
           </div>
 
-          <div className="bg-[#FEDCDC] p-2 w-[200px] rounded-2xl text-center">
+          <div className="flex-none bg-[#FEDCDC] p-2 w-[200px] rounded-2xl text-center">
             <img
               className="w-10 block mx-auto py-1"
               src={cutmeant}
@@ -52,7 +52,7 @@ export default function Shopcategory() {
             <h4 className="text-[10px] py-2 font-bold">Meat & Fish</h4>
           </div>
 
-          <div className="bg-[#FFC266] p-2 w-[200px] rounded-2xl text-center">
+          <div className="flex-none bg-[#FFC266] p-2 w-[200px] rounded-2xl text-center">
             <img
               className="w-10 block mx-auto py-1"
               src={oildrum}
@@ -61,7 +61,7 @@ export default function Shopcategory() {
             <h4 className="text-[10px] py-2 font-bold">Oil & Spices</h4>
           </div>
 
-          <div className="bg-[#C8EBFF] p-2 w-[200px] rounded-2xl text-center">
+          <div className="flex-none bg-[#C8EBFF] p-2 w-[200px] rounded-2xl text-center">
             <img
               className="w-10 block mx-auto py-1"
               src={bread}
@@ -70,7 +70,7 @@ export default function Shopcategory() {
             <h4 className="text-[10px] py-2 font-bold">Bread & Dairy</h4>
           </div>
 
-          <div className="bg-[#E0E2FE] p-2 w-[200px] rounded-2xl text-center">
+          <div className="flex-none bg-[#E0E2FE] p-2 w-[200px] rounded-2xl text-center">
             <img
               className="w-10 block mx-auto py-1"
               src={softdrink}
