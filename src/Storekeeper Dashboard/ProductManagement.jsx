@@ -22,6 +22,15 @@ const InventoryDashboard = () => {
         data-aos-duration="2000"
         data-aos-delay="600"
       >
+        <div className="w-full flex justify-end">
+          {/* add product button */}
+          <NavLink to="/storekeeper/product-management/add-product">
+            <button className="flex items-center gap-2 text-[12px] bg-green-600 rounded px-5 text-white mb-2 cursor-pointer hover:bg-green-700 py-2">
+              {" "}
+              <FaPlus /> Add New Product
+            </button>
+          </NavLink>
+        </div>
         {/* Tabs */}
 
         <div className="px-6 mt-4 flex justify-between gap-5 border-b border-gray-200">
@@ -53,14 +62,14 @@ const InventoryDashboard = () => {
           </div>
           {/* add product button */}
           <NavLink to="/storekeeper/product-management/add-product">
-            <button className="flex items-center gap-2 text-[12px] bg-green-600 rounded px-5 text-white mb-2 cursor-pointer hover:bg-green-700 py-2">
+            <button className="lg:flex  md:flex items-center gap-2 text-[12px] bg-green-600 rounded px-5 text-white mb-2 cursor-pointer hover:bg-green-700 py-2 hidden ">
               {" "}
               <FaPlus /> Add New Product
             </button>
           </NavLink>
         </div>
         {/* Table Header */}
-        <div className="flex justify-between w-full ">
+        <div className=" justify-between w-full hidden  ">
           <div className="px-6 py-4 border-b border-gray-200 flex items-center gap-3">
             <h3 className="text-sm font-semibold text-gray-800">
               Products Inventory{" "}
@@ -82,7 +91,7 @@ const InventoryDashboard = () => {
         </div>
 
         {/* Table */}
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto hidden lg:block md:block">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>

@@ -21,7 +21,7 @@ export default function LayoutForStoreKeeper() {
           <SellerdashbordHeader />
           
         </header>
-        <main className="flex-1 w-full px-5 py-6 ">
+        <main className="flex-1 w-full lg:px-5 lg:py-6 ">
           <Outlet />
         </main>
         <div>

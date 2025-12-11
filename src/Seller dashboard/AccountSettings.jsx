@@ -234,7 +234,7 @@ const AccountSettings = () => {
                 <div className="flex justify-start">
                   <button
                     type="submit"
-                    className="bg-green-600 hover:bg-green-700 cursor-pointer text-white px-5 py-2.5 rounded-md font-medium text-sm flex items-center transition duration-200 shadow-sm"
+                    className="bg-green-600 hover:bg-green-700 cursor-pointer text-white px-5 py-2.5 rounded-md font-medium text-sm flex items-center transition duration-200 shadow-sm w-full justify-center lg:w-50 md:w-50 lg:justify-start  "
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -374,7 +374,7 @@ const AccountSettings = () => {
                   </div>
                 </div>
                 {/* Update Password Button */}
-                <div className="flex justify-start">
+                <div className="flex lg:justify-start md:justify-start justify-end">
                   <button
                     type="submit"
                     className="bg-green-600 cursor-pointer hover:bg-green-800 text-white px-5 py-2.5 rounded-md font-medium text-sm flex items-center transition duration-200 shadow-sm"

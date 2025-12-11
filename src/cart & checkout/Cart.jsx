@@ -54,7 +54,7 @@ export default function CartPage() {
 
       {/* Main Content */}
       <div
-        className="px-8 flex w-full flex-wrap gap-8"
+        className="lg:px-8 md:px-8 px-3 w-full flex-wrap gap-8"
         data-aos="fade-up"
         data-aos-delay="300"
         data-aos-duration="1000"
@@ -66,42 +66,150 @@ export default function CartPage() {
           </a>
 
           {/* Item 1 */}
-          <div className="bg-white shadow p-4 mt-4 flex items-center rounded-lg">
-            <img src={tomatoes} alt="Tomatoes" className="w-20 h-20" />
-            <div className="ml-4 flex-1">
-              <div className="font-semibold">Tomatoes</div>
-              <div className="text-sm text-gray-500">1 KG</div>
-              <div className="font-semibold mt-1">₦3500</div>
+          <div className="hidden lg:flex bg-white shadow lg:p-4 mt-4 md:flex justify-between items-center rounded-lg">
+            <div className="flex items-center gap-4">
+              <div className="lg:bg-white md:bg-white bg-amber-100 w-30 h-30">
+                <img
+                  src={tomatoes}
+                  alt="Tomatoes"
+                  className="lg:w-20 lg:h-20 w-50 "
+                />
+              </div>
+              <div className="ml-4 flex-1">
+                <div className="font-semibold text-[12px] lg:text-sm">
+                  Tomatoes
+                </div>
+                <div className="text-sm text-gray-500">1 KG</div>
+                <div className="font-semibold mt-1 text-[12px] lg:text-sm">
+                  ₦3500
+                </div>
+              </div>
             </div>
-            <button className="text-red-500 text-sm mr-4 cursor-pointer">
-              Remove
-            </button>
-            <div className="flex items-center gap-2">
-              <button
-                className="border px-2 cursor-pointer"
-                onClick={() => UpdateCount(setCount(count - 1))}
-              >
-                -
+            {/* buttons for increasing or reducing cart items */}
+            <div className="buttons px-3">
+              <button className="text-red-500 text-sm mr-4 cursor-pointer text-[10px] lg:text-sm">
+                Remove
               </button>
-              <span>{count}</span>
-              <button
-                className="border px-2 cursor-pointer"
-                onClick={() => UpdateCount(setCount(count + 1))}
-              >
-                +
-              </button>
+              <div className="flex items-center gap-2">
+                <button
+                  className="border px-2 cursor-pointer"
+                  onClick={() => UpdateCount(setCount(count - 1))}
+                >
+                  -
+                </button>
+                <span>{count}</span>
+                <button
+                  className="border px-2 cursor-pointer"
+                  onClick={() => UpdateCount(setCount(count + 1))}
+                >
+                  +
+                </button>
+              </div>
             </div>
           </div>
 
-          {/* Item 2 */}
-          <div className="bg-white shadow p-4 mt-4 flex items-center rounded-lg">
-            <img src={bellpepper} alt="Pepper" className="w-20 h-20" />
-            <div className="ml-4 flex-1">
-              <div className="font-semibold">Bell Pepper</div>
-              <div className="text-sm text-gray-500">4 Pieces</div>
-              <div className="font-semibold mt-1">₦3500</div>
+          {/* mobile device menu item */}
+          <div className=" bg-white shadow-sm lg:hidden md:hidden  rounded mt-3 py-2">
+            <div className="flex items-center gap-3 p-3">
+              <div className="bg-amber-100 w-30 h-30">
+                <img
+                  src={tomatoes}
+                  alt="Tomatoes"
+                  className="lg:w-20 lg:h-20 w-50 "
+                />
+              </div>
+              <div>
+                <h1 className="text-[15px]">Tomatoes</h1>
+                <p className="text-sm text-gray-500 text-[10px]">1 KG</p>
+                <p className="text-[15px]">N3,500</p>
+              </div>
             </div>
-            <button className="text-red-500 text-sm mr-4 cursor-pointer">
+            <div>
+              <div className="buttons px-3 w-full ">
+                <div className="flex items-center justify-between gap-2 w-full bg-green-100 py-1">
+                  <button
+                    className=" px-2 cursor-pointer bg-green-200 text-black"
+                    onClick={() => UpdateCount(setCount(count - 1))}
+                  >
+                    -
+                  </button>
+                  <span>{count}</span>
+                  <button
+                    className=" px-2 cursor-pointer bg-green-600 text-white border-0"
+                    onClick={() => UpdateCount(setCount(count + 1))}
+                  >
+                    +
+                  </button>
+                </div>
+                <button className="text-amber-500 text-sm mr-4 cursor-pointer text-[15px] border border-gray-300 rounded-md px-5 w-full mt-4 py-2 font-bold">
+                  Remove
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className=" bg-white shadow-sm lg:hidden md:hidden  rounded mt-3 py-2">
+            <div className="flex items-center gap-3 p-3">
+              <div className="bg-amber-100 w-30 h-30">
+                <img
+                  src={tomatoes}
+                  alt="Tomatoes"
+                  className="lg:w-20 lg:h-20 w-50 "
+                />
+              </div>
+              <div>
+                <h1 className="text-[15px]">Tomatoes</h1>
+                <p className="text-sm text-gray-500 text-[10px]">1 KG</p>
+                <p className="text-[15px]">N3,500</p>
+              </div>
+            </div>
+            <div>
+              <div className="buttons px-3 w-full ">
+                <div className="flex items-center justify-between gap-2 w-full bg-green-100 py-1">
+                  <button
+                    className=" px-2 cursor-pointer bg-green-200 text-black"
+                    onClick={() => UpdateCount(setCount(count - 1))}
+                  >
+                    -
+                  </button>
+                  <span>{count}</span>
+                  <button
+                    className=" px-2 cursor-pointer bg-green-600 text-white border-0"
+                    onClick={() => UpdateCount(setCount(count + 1))}
+                  >
+                    +
+                  </button>
+                </div>
+                <button className="text-amber-500 text-sm mr-4 cursor-pointer text-[15px] border border-gray-300 rounded-md px-5 w-full mt-4 py-2 font-bold">
+                  Remove
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="flex mt-4 justify-between items-centerlg:hidden md:hidden">
+            <button className="text-amber-500 text-sm mr-4 cursor-pointer text-[15px] border border-gray-300 rounded-md px-5 w-full mt-4 py-2 font-bold">
+              Remove
+            </button>
+            <button className="text-white bg-amber-500 text-sm mr-4 cursor-pointer text-[15px] border border-gray-300 rounded-md px-5 w-full mt-4 py-2 font-bold hover:bg-amber-700 duration-500 transition-ease-in-out">
+              Add more item
+            </button>
+          </div>
+          {/* Item 2 */}
+          <div className="bg-white hidden shadow p-4 mt-4 lg:flex md:flex items-center rounded-lg">
+            <img
+              src={bellpepper}
+              alt="Pepper"
+              className="lg:w-20 lg:h-20 w-10"
+            />
+            <div className="ml-4 flex-1">
+              <div className="font-semibold text-[12px] lg:text-sm">
+                Bell Pepper
+              </div>
+              <div className="text-sm text-gray-500">4 Pieces</div>
+              <div className="font-semibold mt-1 text-[12px] lg:text-sm">
+                ₦3500
+              </div>
+            </div>
+            <button className="text-[10px] lg:text-sm text-red-500 text-sm mr-4 cursor-pointer">
               Remove
             </button>
             <div className="flex items-center gap-2">

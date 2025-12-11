@@ -3,14 +3,19 @@ import { FiAlertTriangle } from "react-icons/fi";
 
 export default function LowStock() {
   return (
-    <div className="bg-white shadow-gray-50 rounded w-full px-3 py-2 mt-4" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+    <div
+      className="bg-white shadow-gray-50 rounded w-full px-3 py-2 mt-4"
+      data-aos="fade-up"
+      data-aos-delay="400"
+      data-aos-duration="1000"
+    >
       <div className="border-b border-b-gray-300 flex items-center justify-between mb-3">
         <h1 className="py-2 text-[12px] font-semibold text-gray-500">
           Low Stock Alert
         </h1>
         <button
           disabled
-          className="text-[8px] bg-red-600 flex items-center gap-2 rounded-full cursor-not-allowed text-white px-3 py-0.5"
+          className="text-[8px] lg:bg-red-600 md:bg-red-600 bg-red-100 flex items-center gap-2 rounded-full cursor-not-allowed lg:text-white md:text-white  text-red-600 font-bold px-3 py-0.5 "
         >
           5 Items
         </button>

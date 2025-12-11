@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaCaretRight } from "react-icons/fa";
+import { FaCaretRight, FaRegCopy } from "react-icons/fa";
 import Footer from "../Layout/Footer";
 import OrderSummary from "./OrderSummary";
 import CheckoutNav from "../common/CheckoutNav";
@@ -8,6 +8,7 @@ import UploadReceiptModal from "../modals/UploadReceipt";
 import { TiDocumentText } from "react-icons/ti";
 import { IoIosClose } from "react-icons/io";
 import { FaRegClock } from "react-icons/fa6";
+import opay from '/src/assets/opay.png'
 
 export default function Checkout() {
   const [isOpen, SetisOpen] = useState(false);
@@ -26,8 +27,6 @@ export default function Checkout() {
       {/* Top Bar */}
       <CheckoutNav />
 
-      {/* Header */}
-
       {/* Breadcrumb */}
       <div className="px-8 py-4 text-gray-800 text-sm flex items-center gap-1">
         <h1 className="text-[12px]">
@@ -43,7 +42,7 @@ export default function Checkout() {
 
       {/* main content */}
       <div
-        className="w-full px-6 py-5"
+        className="w-full lg:px-6 md:px-5 py-5"
         data-aos="fade-up"
         data-aos-delay="400"
         data-aos-duration="2000"
@@ -59,29 +58,54 @@ export default function Checkout() {
                 All transactions are secure and encrypted.
               </p>
 
-              <div className="px-2 py-6">
-                <h1 className="text-[10px] py-0.5">
+              <div className="lg:px-2 md:px-2 py-6">
+                <h1 className=" hidden lg:block md:block text-[10px] py-0.5">
                   Use the Instant Transfer option to pay the total amount due
                   to:
                 </h1>
-                <p className="text-[10px] py-0.5">
-                  Account Name: <span className="font-bold">Glory Nwafor</span>
-                </p>
-                <p className="text-[10px] py-0.5">
-                  Account Number: <span className="font-bold">3005672826</span>
-                </p>
-                <p className="text-[10px] py-0.5">
-                  Bank Name: <span className="font-bold">OPAY</span>
-                </p>
-
-                <div className="mt-3">
-                  <h1 className="text-[12px]"> Amount to Pay:</h1>
-                  <p className="font-bold">N7,000</p>
-                  <p className="text-[10px] pt-3">
-                    Please, note that you are to upload the payment receipt so
-                    that we can confirm your order
-                  </p>
+                <div className="bg-green-600 lg:bg-white md:bg-white rounded-xl lg:rounded-0 lg:px-0 md:px-0 px-3 py-4 lg-py-0 md:py-0 ">
+                  <div className="lg:hidden md:hidden">
+                    <div className="flex items-center font-light text-210px] justify-between text-white py-1">
+                      <p>Account Number :</p>
+                      <p>Bank Name</p>
+                    </div>
+                    <div className="flex font-semibold  items-center justify-between text-white py-1">
+                      <p className="flex items-center gap-3 ">
+                        3005672826 <FaRegCopy className="cursor-pointer" />
+                      </p>
+                      <img src={opay} alt="opay logo" className='w-20' />
+                    </div>
+                    <div className="flex font-light text-[12px] items-center justify-between text-white py-1">
+                      <p className="">Account Name:</p>
+                      <p>Amount to Pay</p>
+                    </div>
+                    <div className="flex  font-semibold items-center justify-between text-white py-1">
+                      <p>Glory Nwafor</p>
+                      <p>N 7,000</p>
+                    </div>
+                  </div>
                 </div>
+                <div className="hidden lg:block md:block">
+                  <p className="text-[10px] py-0.5">
+                    Account Name:{" "}
+                    <span className="font-bold">Glory Nwafor</span>
+                  </p>
+                  <p className="text-[10px] py-0.5">
+                    Account Number:{" "}
+                    <span className="font-bold">3005672826</span>
+                  </p>
+                  <p className="text-[10px] py-0.5">
+                    Bank Name: <span className="font-bold">OPAY</span>
+                  </p>
+                  <div className="mt-3">
+                    <h1 className="text-[12px]"> Amount to Pay:</h1>
+                    <p className="font-bold">N7,000</p>
+                  </div>
+                </div>
+                <p className="text-[10px] pt-3">
+                  Please, note that you are to upload the payment receipt so
+                  that we can confirm your order
+                </p>
               </div>
               {/* this will be hidden till receipt has been uploaded */}
               <div>

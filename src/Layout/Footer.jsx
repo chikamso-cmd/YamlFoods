@@ -9,7 +9,7 @@ export default function Footer() {
   const [Hide, sethide] = useState(false);
 
   return (
-    <div className="lg:bg-green-900 md:bg-green-900 lg:text-white md:text-white text-black lg:px-9 lg:py-5 md:px-5 md:py-3 px-5">
+    <div className="lg:bg-green-900 md:bg-green-900 lg:text-white md:text-white text-black lg:px-9 lg:py-5 md:px-5 md:py-3">
       {/* Footer */}
       <div className="lg:bg-green-900 md:bg-green-900 lg:text-white md:text-white text-black lg:p-10 grid lg:grid-cols-4 md:grid-cols-2  gap-6 md:p-3 p-2">
         <div className=" lg:hidden md:hidden">
@@ -113,6 +113,7 @@ export default function Footer() {
       <div className="text-center text-xs py-4 text-gray-400">
         © 2025 FreshMart. All rights reserved.
       </div>
+      {/* mobile footer */}
       <div className="bg-white px-5 py-4 flex items-center justify-between lg:hidden md:hidden">
         <div className="text-center flex flex-col justify-center items-center text-sm font-semibold cursor-pointer">
           <NavLink
