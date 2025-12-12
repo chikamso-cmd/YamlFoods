@@ -1,5 +1,5 @@
 import React from "react";
-import bulkorder from "../assets/Fruit_cart.png";
+import bulkorder from "../assets/fruit_cart.png";
 
 export default function Bulk_order() {
   return (

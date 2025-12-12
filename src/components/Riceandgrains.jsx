@@ -6,7 +6,7 @@ import bellpepper from "../assets/bellpepper.png";
 import redpepper from "../assets/redpepper.png";
 import onion from "../assets/onions.png";
 import Cabbage from "../assets/cabbage.png";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Selectoptions from "../modals/Selectoptions";
 
 export default function Riceandgrains() {

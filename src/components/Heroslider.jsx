@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import hero from "../assets/hero_img.png";
 import fruit_basket from "../assets/fruit_basket.png";
-import rectangle from "../assets/Rectangle 3.png";
+import rectangle from "../assets/Rectangle4.png";
 import Rectangle from "../assets/rectangle3.png";
 import { Link } from "react-router-dom";
 
