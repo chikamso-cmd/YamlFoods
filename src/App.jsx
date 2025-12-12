@@ -1,43 +1,59 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home";
 import Layout from "./Layout/Layout";
+
+// cart-&-checkout
 import CartPage from "./cart-&-checkout/Cart";
 import Checkout from "./cart-&-checkout/Checkout";
 import ProductDetails from "./cart-&-checkout/productdetails";
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
-import Selectoptions from "./modals/Selectoptions";
-import ScrollToTop from "./components/ScrollTotop";
 import ReviewOrder from "./cart-&-checkout/ReviewOrder";
 import PaymentPage from "./cart-&-checkout/PaymentPage";
+import Successfulpayment from "./cart-&-checkout/Successfulpayment";
+
+// Auth
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+
+// Components / Modals
+import Selectoptions from "./modals/Selectoptions";
+import ScrollToTop from "./components/ScrollTotop";
+
+// Seller-dashboard
 import Overview from "./Seller-dashboard/Overview";
 import MyOrders from "./Seller-dashboard/MyOrders";
 import LayoutForSellers from "./dashboardlayout/LayoutForSeller";
 import ViewOrder from "./Seller-dashboard/ViewOrder";
 import Addresses from "./Seller-dashboard/Addresses";
 import AccountSettings from "./Seller-dashboard/AccountSettings";
-import Successfulpayment from "./cart-&-checkout/Successfulpayment";
+
+// Storekeeperdashboard-layout
 import LayoutForStoreKeeper from "./Storekeeperdashboard-layout/LayoutForStoreKeeper";
+
+// Storekeeper-Dashboard
 import DashboardOverview from "./Storekeeper-Dashboard/DashboardOverview";
 import Orders from "./Storekeeper-Dashboard/Orders";
 import ViewOrders from "./Storekeeper-Dashboard/ViewOrders";
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import InventoryDashboard from "./Storekeeper-Dashboard/ProductManagement";
 import AddProduct from "./Storekeeper-Dashboard/AddProducts";
 import ProductInventory from "./Storekeeper-Dashboard/AddBulkProduct";
-import ProductCard from "./Storekeeper-Dashboard/Dashboard-component/ProductCard";
 import AddBulkProduct from "./Storekeeper-Dashboard/AddProductVariant";
 import AddProductBulk from "./Storekeeper-Dashboard/BulkProducts";
+
+// Dashboard-component
+import ProductCard from "./Storekeeper-Dashboard/Dashboard-component/ProductCard";
+
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      once: true, // Animation happens only once when scrolling down
-      disable: false, // Accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      duration: 1000,
+      once: true,
+      disable: false,
     });
   }, []);
 
@@ -71,16 +87,14 @@ function App() {
           <Route path="account-settings" element={<AccountSettings />} />
         </Route>
 
-        {/* storekeeper dashboard routes */}
+        {/* Storekeeper dashboard */}
         <Route path="/storekeeper" element={<LayoutForStoreKeeper />}>
           <Route path="store-overview" element={<DashboardOverview />} />
           <Route path="my-orders" element={<Orders />} />
           <Route path="my-orders/view-orders" element={<ViewOrders />} />
           <Route path="product-management" element={<InventoryDashboard />} />
-          <Route
-            path="product-management/bulk-product"
-            element={<ProductInventory />}
-          />
+
+          {/* Bulk products */}
           <Route
             path="product-management/bulk-product"
             element={<ProductInventory />}
