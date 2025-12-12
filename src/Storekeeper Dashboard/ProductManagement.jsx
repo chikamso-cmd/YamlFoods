@@ -1,12 +1,14 @@
 // import React, { use } from "react";
 import { FaEye, FaEdit, FaTrash } from "react-icons/fa";
 import { Search, Filter, CheckCircle, XCircle } from "lucide-react";
-import { FaPlus, FaTrashCan } from "react-icons/fa6";
-import { SlEye } from "react-icons/sl";
+import { FaPlus, FaCaretDown } from "react-icons/fa6";
+import { SlEye} from "react-icons/sl";
 import { TfiTrash } from "react-icons/tfi";
-import { CiEdit } from "react-icons/ci";
+import { CiEdit, CiTrash } from "react-icons/ci";
 import { NavLink } from "react-router-dom";
 import ProductCard from "./Dashboard component/ProductCard";
+import meat from '../assets/meat.png'
+import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 
 const InventoryDashboard = () => {
   // const fame = use()
@@ -91,7 +93,7 @@ const InventoryDashboard = () => {
         </div>
 
         {/* Table */}
-        <div className="overflow-x-auto hidden lg:block md:block">
+        <div className="overflow-x-auto hidden lg:flex md:flex sm:flex">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
@@ -388,12 +390,125 @@ const InventoryDashboard = () => {
         </div>
 
         {/* Add Product Button */}
-        {/* <div className="px-6 py-4 border-t border-gray-200">
-          <button className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-200 ease-in-out transform hover:-translate-y-0.5 shadow-md">
-            <FaPlus className="mr-2" />
-            Add New Product
-          </button>
-        </div> */}
+        <div className="px-3 py-4 border-t border-gray-200 lg:hidden md:hidden sm:hidden ">
+          <div className="border border-gray-200 rounded-sm py-2 px-2 mb-1">
+            <div className="flex items-center gap-2 px-2 py-2 w-full">
+              <div className="flex gap-2 w-full">
+                <div className="w-20 h-20">
+                  <img src={meat} alt="red meat" />
+                </div>
+                <div className="w-full">
+                  <div className="flex justify-between items-center  ">
+                    <div>
+                      <p className="text-[12px] font-medium">Meats</p>
+                    </div>
+                    <span className="text-[12px] text-green-600">
+                      100 in stock
+                    </span>
+                  </div>
+                  <p className="mt-2 text-[12px] font-medium ">N5,000</p>
+                  <p className="flex gap-2 item-center text-[12px]">
+                    {" "}
+                    1 KG <FaCaretDown />
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="flex gap-3 justify-end">
+              <button className="flex items-center justify-center bg-green-600 hover:bg-blue-700 text-white font-semibold py-1 px-6 rounded-lg transition duration-200 ease-in-out transform hover:-translate-y-0.5 shadow-md text-[10px] w-40">
+                <FaEdit className="mr-2" />
+                Edit
+              </button>
+              <button className="flex items-center justify-center bg-red-200 hover:bg-blue-700 text-red-600 font-semibold py-1 px-6 rounded-lg transition duration-200 ease-in-out transform hover:-translate-y-0.5 shadow-md">
+                <CiTrash className="mr-2" />
+              </button>
+            </div>
+          </div>
+          <div className="border border-gray-200 rounded-sm py-2 px-2 mb-1">
+            <div className="flex items-center gap-2 px-2 py-2 w-full">
+              <div className="flex gap-2 w-full">
+                <div className="w-20 h-20">
+                  <img src={meat} alt="red meat" />
+                </div>
+                <div className="w-full">
+                  <div className="flex justify-between items-center  ">
+                    <div>
+                      <p className="text-[12px] font-medium">Meats</p>
+                    </div>
+                    <span className="text-[12px] text-green-600">
+                      100 in stock
+                    </span>
+                  </div>
+                  <p className="mt-2 text-[12px] font-medium ">N5,000</p>
+                  <p className="flex gap-2 item-center text-[12px]">
+                    {" "}
+                    1 KG <FaCaretDown />
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="flex gap-3 justify-end">
+              <button className="flex items-center justify-center bg-green-600 hover:bg-blue-700 text-white font-semibold py-1 px-6 rounded-lg transition duration-200 ease-in-out transform hover:-translate-y-0.5 shadow-md text-[10px] w-40">
+                <FaEdit className="mr-2" />
+                Edit
+              </button>
+              <button className="flex items-center justify-center bg-red-200 hover:bg-blue-700 text-red-600 font-semibold py-1 px-6 rounded-lg transition duration-200 ease-in-out transform hover:-translate-y-0.5 shadow-md">
+                <CiTrash className="mr-2" />
+              </button>
+            </div>
+          </div>
+          <div className="border border-gray-200 rounded-sm py-2 px-2 mb-1">
+            <div className="flex items-center gap-2 px-2 py-2 w-full">
+              <div className="flex gap-2 w-full">
+                <div className="w-20 h-20">
+                  <img src={meat} alt="red meat" />
+                </div>
+                <div className="w-full">
+                  <div className="flex justify-between items-center  ">
+                    <div>
+                      <p className="text-[12px] font-medium">Meats</p>
+                    </div>
+                    <span className="text-[12px] text-green-600">
+                      100 in stock
+                    </span>
+                  </div>
+                  <p className="mt-2 text-[12px] font-medium ">N5,000</p>
+                  <p className="flex gap-2 item-center text-[12px]">
+                    {" "}
+                    1 KG <FaCaretDown />
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="flex gap-3 justify-end">
+              <button className="flex items-center justify-center bg-green-600 hover:bg-blue-700 text-white font-semibold py-1 px-6 rounded-lg transition duration-200 ease-in-out transform hover:-translate-y-0.5 shadow-md text-[10px] w-40">
+                <FaEdit className="mr-2" />
+                Edit
+              </button>
+              <button className="flex items-center justify-center bg-red-200 hover:bg-blue-700 text-red-600 font-semibold py-1 px-6 rounded-lg transition duration-200 ease-in-out transform hover:-translate-y-0.5 shadow-md">
+                <CiTrash className="mr-2" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* mobile button for padgination */}
+      <div className="mt-4">
+        <div className="flex justify-between items-center px-2">
+          <IoIosArrowRoundBack />
+          <div className="flex gap-1">
+            <button className="border px-3 rounded border-gray-200 text-[12px] py-1 bg-blue-100">
+              1
+            </button>
+            <button className="border px-3 rounded border-gray-200 text-[12px] py-1">
+              ...
+            </button>
+            <button className="border px-3 rounded border-gray-200 text-[12px] py-1">
+              5
+            </button>
+          </div>
+          <IoIosArrowRoundForward />
+        </div>
       </div>
     </div>
   );
