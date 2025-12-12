@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { getHeaderConfig } from "./configHheaders";
-import logo from '/src/assets/logo.png'
+import logo from '../assets/LOGO.png'
 import storemanager from '../assets/storemanager.jpg'
 
 export default function SellerdashbordHeader() {

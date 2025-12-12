@@ -2,7 +2,7 @@ import React from "react";
 import { FaRegUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { IoBasketOutline } from "react-icons/io5";
-import logo from '/src/assets/LOGO.png' 
+import logo from '../assets/LOGO.png' 
 import { NavLink } from "react-router-dom";
 
 export default function DashbordNav() {
