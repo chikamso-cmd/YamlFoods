@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { IoBasketOutline, IoEyeOffOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
 import { FaRegEye } from "react-icons/fa6";
+import LOGO from '../assets/LOGO.png'
 
 function SignUp() {
   const [formData, setFormData] = useState({
@@ -30,14 +31,14 @@ function SignUp() {
   };
 
   return (
-    <div className="min-h-screen bg-yellow-50 text-gray-800 flex flex-col shadow">
+    <div className="min-h-screen bg-[#fffdf5] text-gray-800 flex flex-col shadow">
       <div className="w-full">
         {/* Top navigation bar */}
-        <div className="bg-[#f5f1e4] py-2 px-5 flex justify-between text-xs">
-          <span className="text-[10px] md:text-sm lg:text-2xl">
+        <div className="bg-[#fff8e1] py-2 px-3 lg:px-5 flex justify-between text-xs">
+          <span className="text-[10px] md:text-sm lg:text-md">
             Delivery within 24 hours
           </span>
-          <span className="text-[10px] md:text-sm lg:text-2xl">
+          <span className="text-[10px] md:text-sm lg:text-md">
             Operates in Arambra and Awka for now
           </span>
           <span className="hidden md:block lg:block">24/7 Support</span>
@@ -46,7 +47,11 @@ function SignUp() {
 
         {/* Logo section */}
         <div className="bg-white py-4 px-5 flex justify-between items-center">
-          <div className="text-2xl font-bold">LOGO</div>
+          <div className="text-2xl font-bold">
+            <Link to="/">
+              <img src={LOGO} alt="company logo" className="w-30" />
+            </Link>
+          </div>
           <Link to="/Cart">
             <button className="flex text-[12px] font-semibold items-center gap-2 cursor-pointer ">
               <IoBasketOutline className="text-[14px] font-semibold text-[#ff9900] " />
@@ -58,7 +63,7 @@ function SignUp() {
 
       {/* Main form container */}
       <div
-        className="flex-1 flex justify-center items-center p-5"
+        className="flex-1 flex justify-center items-center p-3"
         data-aos="zoom-in"
         data-aos-delay="300"
         data-aos-duration="1000"
@@ -78,8 +83,8 @@ function SignUp() {
 
           <form onSubmit={handleSubmit}>
             {/* Name fields */}
-            <div className="flex gap-3 mb-4">
-              <div className="w-1/2 text-left">
+            <div className="lg:flex gap-3 mb-4 w-full">
+              <div className="lg:w-1/2 text-left">
                 <label htmlFor="firstName" className="block text-sm mb-1">
                   First Name
                 </label>
@@ -94,7 +99,7 @@ function SignUp() {
                   className="w-full p-2.5 border border-gray-300 rounded-md text-sm"
                 />
               </div>
-              <div className="w-1/2 text-left">
+              <div className="lg:w-1/2 text-left mt-2">
                 <label htmlFor="lastName" className="block text-sm mb-1">
                   Last Name
                 </label>

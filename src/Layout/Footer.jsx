@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { BsChevronUp } from "react-icons/bs";
 import { FaApple } from "react-icons/fa";
 import { TbHome2, TbShoppingCart, TbBasket, TbUser } from "react-icons/tb";
-import {NavLink} from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   const [hide, setHide] = useState(false);
   const [Hide, sethide] = useState(false);
 
   return (
-    <div className="lg:bg-green-900 md:bg-green-900 lg:text-white md:text-white text-black lg:px-9 lg:py-5 md:px-5 md:py-3">
+    <div className="lg:bg-green-900 md:bg-green-900 lg:text-white md:text-white text-black lg:px-9 lg:py-5 md:px-5 md:py-3 px-2">
       {/* Footer */}
       <div className="lg:bg-green-900 md:bg-green-900 lg:text-white md:text-white text-black lg:p-10 grid lg:grid-cols-4 md:grid-cols-2  gap-6 md:p-3 p-2">
         <div className=" lg:hidden md:hidden">
@@ -43,10 +43,10 @@ export default function Footer() {
 
           <div className="font-semibold mb-2 lg:hidden md:hidden">
             <h1
-              className="flex items-center justify-between border-b mb-2 pb-2 border-b-gray-300 cursor-pointer lg:border-b-0"
+              className="flex items-center justify-between border-b mb-2 pb-2 border-b-gray-200 cursor-pointer lg:border-b-0"
               onClick={() => setHide(!hide)}
             >
-              Quick Links
+              Company
               <BsChevronUp
                 className={`transition-transform lg:block ${
                   hide ? "" : "rotate-180"
@@ -66,7 +66,7 @@ export default function Footer() {
         </div>
         <div>
           <div className="font-semibold mb-2 hidden lg:block md:block">
-            <h1 className="flex items-center justify-between border-b mb-2 pb-2 border-b-gray-300 lg:border-b-0 cursor-pointer">
+            <h1 className="flex items-center justify-between border-b mb-2 pb-2 border-b-gray-200 lg:border-b-0 cursor-pointer">
               Socials
             </h1>
 
@@ -80,7 +80,7 @@ export default function Footer() {
 
           <div className="font-semibold mb-2 lg:hidden md:hidden">
             <h1
-              className="flex items-center justify-between border-b mb-2 pb-2 border-b-gray-300 cursor-pointer"
+              className="flex items-center justify-between border-b mb-2 pb-2 border-b-gray-200 cursor-pointer"
               onClick={() => sethide(!Hide)}
             >
               Socials
@@ -100,11 +100,11 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <div className="font-semibold mb-2">Contact Info</div>
-          <ul className="text-sm space-y-1">
+          <div className="font-semibold mb-2">FAQ</div>
+          {/* <ul className="text-sm space-y-1">
             <li>Call: +234 700 123 4567</li>
             <li>support@freshmart.ng</li>
-          </ul>
+          </ul> */}
         </div>
       </div>
 
@@ -114,7 +114,7 @@ export default function Footer() {
         © 2025 FreshMart. All rights reserved.
       </div>
       {/* mobile footer */}
-      <div className="bg-white px-5 py-4 flex items-center justify-between lg:hidden md:hidden">
+      <div className="bg-white px-3 py-4 flex items-center justify-between lg:hidden md:hidden">
         <div className="text-center flex flex-col justify-center items-center text-sm font-semibold cursor-pointer">
           <NavLink
             to="/"
@@ -122,8 +122,8 @@ export default function Footer() {
               `${isActive ? "text-green-600 text-center justify-center" : ""}`
             }
           >
-            <TbHome2 className="mx-auto font-bold" />
-            <h1>Home</h1>
+            <TbHome2 className="mx-auto font-bold text-[20px]" />
+            <h1 className="text-[13px]">Home</h1>
           </NavLink>
         </div>
         <div className="text-center flex flex-col justify-center items-center text-sm font-semibold cursor-pointer">
@@ -131,8 +131,8 @@ export default function Footer() {
             to=".cart"
             className={({ isActive }) => `${isActive ? "text-green-600" : ""}`}
           >
-            <TbShoppingCart className="mx-auto" />
-            <h1>Shop</h1>
+            <TbShoppingCart className="mx-auto text-[20px]" />
+            <h1 className="text-[13px]">Shop</h1>
           </NavLink>
         </div>
         <div className="text-center flex flex-col justify-center items-center text-sm font-semibold cursor-pointer">
@@ -140,8 +140,8 @@ export default function Footer() {
             to="/cart"
             className={({ isActive }) => `${isActive ? "text-green-600" : ""}`}
           >
-            <TbBasket className="mx-auto" />
-            <h1>My Basket</h1>
+            <TbBasket className="mx-auto text-[20px]" />
+            <h1 className="text-[13px]">My Basket</h1>
           </NavLink>
         </div>
         <div className="text-center flex flex-col justify-center items-center text-sm font-semibold cursor-pointer">
@@ -149,8 +149,8 @@ export default function Footer() {
             to="/signin"
             className={({ isActive }) => `${isActive ? "text-green-600" : ""}`}
           >
-            <TbUser className="mx-auto" />
-            <h1>Profile</h1>
+            <TbUser className="mx-auto text-[20px]" />
+            <h1 className="text-[13px]">Profile</h1>
           </NavLink>
         </div>
       </div>

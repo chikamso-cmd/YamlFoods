@@ -19,16 +19,16 @@ export default function Navbar() {
           <h1>Secure Payment</h1>
         </div>
       </div>
-      <div className="flex justify-between items-center px-8 py-7 lg:w-full">
+      <div className="flex lg:justify-evenly md:justify-between items-center px-8 py-7 lg:w-full">
         <Link to="/">
           <img
-            className="w-[20%] sm:w-[20%] md:w-50 lg:w-[20%] cursor-pointer"
+            className="w-[40%] sm:w-[20%] md:w-50 lg:w-[50%] cursor-pointer"
             src={Logo}
             alt="company-logo"
           />
         </Link>
         {/* select btn */}
-        <div className=" hidden lg:flex items-center gap-1">
+        <div className=" hidden md:flex lg:flex items-center gap-1 lg:mr-10">
           <select
             className="bg-green-700 text-white py-1.5 px-3 rounded text-[10px]"
             name=""
@@ -46,14 +46,14 @@ export default function Navbar() {
             className="hidden fixed right-95 text-gray-400 cursor-pointer md:right-209"
           />
           <input
-            className="border rounded px-2 py-0.5 capitalize text-[14px] w-30 md:w-100 border-gray-400 placeholder:text-[10px]"
+            className="border rounded px-2 py-0.5 capitalize text-[14px] w-30 md:w-80 border-gray-400 placeholder:text-[10px]"
             type="search"
             name=""
             id="search"
             placeholder="search"
           />
         </div>
-        <div className=" hidden lg:flex items-center justify-between gap-4 text-[10px] ">
+        <div className=" hidden md:hidden lg:flex items-center justify-between gap-4 text-[10px] ">
           <button className="text-[10px] bg-[#4CAF4F] rounded text-white px-4 py-1 cursor-pointer hover:bg-green-600 duration-400">
             Install App
           </button>
@@ -76,7 +76,7 @@ export default function Navbar() {
         <div>
           {/* Sidebar */}
           {isOpen && (
-            <div className="px-6 py-5 fixed top-0 left-0 bg-black/80 backdrop-blur-sm h-full z-50 w-70 lg:hidden md:hidden overflow-y-auto">
+            <div className="px-6 py-5 fixed top-0 left-0 bg-black/80 backdrop-blur-sm h-full z-50 w-70 lg:hidden md:block overflow-y-auto">
               <Link to="/">
                 <img
                   className="w-[60%] cursor-pointer mb-5"
@@ -100,7 +100,7 @@ export default function Navbar() {
                 placeholder="search"
               />
 
-              <div className="text-[10px] lg:hidden md:hidden">
+              <div className="text-[10px] lg:hidden md:block">
                 <button className="text-[10px] bg-[#358b38] rounded text-white px-4 py-2 cursor-pointer hover:bg-green-600 duration-400 w-full mb-3">
                   Install App
                 </button>
@@ -125,14 +125,14 @@ export default function Navbar() {
           {/* Hamburger / Close button */}
           {!isOpen ? (
             <RxHamburgerMenu
-              size={30}
-              className="cursor-pointer lg:hidden md:hidden"
+              size={20}
+              className="cursor-pointer lg:hidden md:block"
               onClick={() => setisOpen(true)}
             />
           ) : (
             <IoCloseOutline
-              size={30}
-              className="cursor-pointer lg:hidden md:hidden"
+              size={20}
+              className="cursor-pointer lg:hidden md:block"
               onClick={() => setisOpen(false)}
             />
           )}

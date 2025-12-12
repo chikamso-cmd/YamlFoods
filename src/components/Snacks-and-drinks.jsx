@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import { FaChevronDown, FaChevronRight } from "react-icons/fa";
-import carrot from "../assets/carrot.png";
 import tomatoes from "../assets/tomatoes.png";
-import bellpepper from "../assets/bellpepper.png";
-import redpepper from "../assets/redpepper.png";
-import onion from "../assets/onions.png";
-import Cabbage from "../assets/cabbage.png";
 import { Link } from "react-router-dom";
 import Selectoptions from "../modals/Selectoptions";
 
@@ -23,7 +18,7 @@ export default function Snacks_and_drinks() {
 
   return (
     <div
-      className="w-full my-5"
+      className="w-full my-5 px-2 lg:px-0"
       data-aos="zoom-in-down"
       data-aos-delay="400"
       data-aos-duration="2000"
@@ -37,13 +32,13 @@ export default function Snacks_and_drinks() {
       </div>
       {/* card content */}
       <div className="grid grid-cols-2 lg:grid-cols-6 md:grid-cols-3 mt-5 gap-4">
-        <div className=" card bg-white">
-          <div className="bg-amber-100 h-[90px] py-5 ">
+        <div className=" card bg-white border border-[#f9f6ec] shadow shadow-gray-200">
+          <div className="bg-amber-100 h-[130px] ">
             <Link to="/Productdetails">
               <img
                 src={tomatoes}
                 alt="fresh tomatoes"
-                className="w-[60px] mx-auto  "
+                className="w-[120px]  mx-auto  "
               />
             </Link>
           </div>
@@ -64,19 +59,18 @@ export default function Snacks_and_drinks() {
             </div>
           </div>
         </div>
-
-        <div className=" card bg-white">
-          <div className="bg-amber-100 h-[90px] py-5 ">
+        <div className=" card bg-white border border-[#f9f6ec] shadow shadow-gray-200">
+          <div className="bg-amber-100 h-[130px] ">
             <Link to="/Productdetails">
               <img
-                src={redpepper}
+                src={tomatoes}
                 alt="fresh tomatoes"
-                className="w-[60px] mx-auto  "
+                className="w-[120px]  mx-auto  "
               />
             </Link>
           </div>
           <div className="px-1">
-            <h1 className="text-[10px] pt-1">Maryland</h1>
+            <h1 className="text-[10px] pt-1">Fanta</h1>
             <p className="text-[10px] font-bold">#3,500</p>
             <div
               className="flex items-center justify-between py-2"
@@ -92,19 +86,18 @@ export default function Snacks_and_drinks() {
             </div>
           </div>
         </div>
-
-        <div className=" card bg-white">
-          <div className="bg-amber-100 h-[90px] py-5 ">
+        <div className=" card bg-white border border-[#f9f6ec] shadow shadow-gray-200">
+          <div className="bg-amber-100 h-[130px] ">
             <Link to="/Productdetails">
               <img
-                src={carrot}
+                src={tomatoes}
                 alt="fresh tomatoes"
-                className="w-[60px] mx-auto  "
+                className="w-[120px]  mx-auto  "
               />
             </Link>
           </div>
           <div className="px-1">
-            <h1 className="text-[10px] pt-1">Cocacola</h1>
+            <h1 className="text-[10px] pt-1">Fanta</h1>
             <p className="text-[10px] font-bold">#3,500</p>
             <div
               className="flex items-center justify-between py-2"
@@ -120,19 +113,18 @@ export default function Snacks_and_drinks() {
             </div>
           </div>
         </div>
-
-        <div className=" card bg-white">
-          <div className="bg-amber-100 h-[90px] py-5 ">
+        <div className=" card bg-white border border-[#f9f6ec] shadow shadow-gray-200">
+          <div className="bg-amber-100 h-[130px] ">
             <Link to="/Productdetails">
               <img
-                src={onion}
+                src={tomatoes}
                 alt="fresh tomatoes"
-                className="w-[45px] mx-auto  "
+                className="w-[120px]  mx-auto  "
               />
             </Link>
           </div>
           <div className="px-1">
-            <h1 className="text-[10px] pt-1">Shortbread</h1>
+            <h1 className="text-[10px] pt-1">Fanta</h1>
             <p className="text-[10px] font-bold">#3,500</p>
             <div
               className="flex items-center justify-between py-2"
@@ -148,19 +140,18 @@ export default function Snacks_and_drinks() {
             </div>
           </div>
         </div>
-
-        <div className=" card bg-white hidden lg:block md:block">
-          <div className="bg-amber-100 h-[90px] py-5 ">
+        <div className="hidden lg:block md:block card bg-white border border-[#f9f6ec] shadow shadow-gray-200">
+          <div className="bg-amber-100 h-[130px] ">
             <Link to="/Productdetails">
               <img
-                src={bellpepper}
+                src={tomatoes}
                 alt="fresh tomatoes"
-                className="w-[60px] mx-auto  "
+                className="w-[120px]  mx-auto  "
               />
             </Link>
           </div>
           <div className="px-1">
-            <h1 className="text-[10px] pt-1">Sprite</h1>
+            <h1 className="text-[10px] pt-1">Fanta</h1>
             <p className="text-[10px] font-bold">#3,500</p>
             <div
               className="flex items-center justify-between py-2"
@@ -176,19 +167,18 @@ export default function Snacks_and_drinks() {
             </div>
           </div>
         </div>
-
-        <div className=" card bg-white hidden lg:block md:block">
-          <div className="bg-amber-100 h-[90px] py-5 ">
+        <div className=" hidden lg:block md:block card bg-white border border-[#f9f6ec] shadow shadow-gray-200">
+          <div className="bg-amber-100 h-[130px] ">
             <Link to="/Productdetails">
               <img
-                src={Cabbage}
+                src={tomatoes}
                 alt="fresh tomatoes"
-                className="w-[60px] mx-auto  "
+                className="w-[120px]  mx-auto  "
               />
             </Link>
           </div>
-          <div className="px-1 hidden">
-            <h1 className="text-[10px] pt-1">Commando</h1>
+          <div className="px-1">
+            <h1 className="text-[10px] pt-1">Fanta</h1>
             <p className="text-[10px] font-bold">#3,500</p>
             <div
               className="flex items-center justify-between py-2"

@@ -42,7 +42,7 @@ const GrocerySlider = () => {
                 share costs, save more, and enjoy doorstep delivery.
               </p>
               <div className="flex justify-start lg:justify-start">
-                <button className="bulkdeals bg-white text-[12px] text-green-600  px-7 py-1 rounded-md font-semibold hover:bg-gray-100 text-center cursor-pointer">
+                <button className="bulkdeals bg-white text-[16px] text-green-600  px-7 py-1 rounded-md font-medium hover:bg-gray-100 text-center cursor-pointer">
                   Explore Bulk Deals
                 </button>
               </div>
@@ -56,7 +56,7 @@ const GrocerySlider = () => {
             />
           </div>
           <img
-            className="h-15 w-0 hidden lg:w-full md-w-full sm:w-full"
+            className="h-15  hidden lg:block md:block w sm:w-full"
             src={Rectangle}
             alt=""
           />
@@ -80,11 +80,11 @@ const GrocerySlider = () => {
                 without compromising on quality.
               </p>
               <div className="flex gap-5 justify-start lg:justify-start md:justify-start">
-                <button className=" saving bg-white text-[12px] text-[#4CAF4F]  px-7 py-1 rounded-md font-semibold hover:bg-gray-100 cursor-pointer">
-                  Start Saving
+                <button className=" saving bg-white text-[16px] text-[#4CAF4F]  px-7 py-1 rounded-md  hover:bg-gray-100 cursor-pointer font-medium">
+                  Shop Now
                 </button>
                 <Link to="/Signin">
-                  <button className="bg-transparent text-[12px] text-white px-7 py-1 rounded-md font-lighter border cursor-pointer hover:bg-white duration-500 hover:text-green-600">
+                  <button className="bg-transparent text-[16px] text-white px-7 py-1 rounded-md font-medium border cursor-pointer hover:bg-white duration-500 hover:text-green-600">
                     Register Now
                   </button>
                 </Link>

@@ -19,7 +19,7 @@ export default function Bulk_combo() {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4  ">
         <div className="my-3">
-          <div className="bg-white  h- shadow-xl p-1 rounded">
+          <div className="bg-white  h- shadow p-1 rounded">
             <img src={bulkcard} alt="variety of products" />
             <div>
               <h1 className="text-[12px] py-0.5">Naija Essential Pack</h1>
@@ -38,7 +38,7 @@ export default function Bulk_combo() {
         </div>
 
         <div className="my-3">
-          <div className="bg-white  shadow-xl p-1 rounded">
+          <div className="bg-white  shadow p-1 rounded">
             <img src={bulkcard} alt="variety of products" />
             <div>
               <h1 className="text-[12px] py-0.5">Naija Essential Pack</h1>
@@ -57,7 +57,7 @@ export default function Bulk_combo() {
         </div>
 
         <div className="my-3">
-          <div className="bg-white shadow-xl p-1 rounded">
+          <div className="bg-white shadow p-1 rounded">
             <img src={bulkcard} alt="variety of products" />
             <div>
               <h1 className="text-[12px] py-0.5">Naija Essential Pack</h1>
@@ -76,7 +76,7 @@ export default function Bulk_combo() {
         </div>
 
         <div className="my-3">
-          <div className="bg-white  shadow-xl p-1 rounded">
+          <div className="bg-white  shadow p-1 rounded">
             <img src={bulkcard} alt="variety of products" />
             <div>
               <h1 className="text-[12px] py-0.5">Naija Essential Pack</h1>
@@ -95,7 +95,7 @@ export default function Bulk_combo() {
         </div>
 
         <div className="my-3 hidden lg:block md:block">
-          <div className="bg-white  shadow-xl p-1 rounded">
+          <div className="bg-white  shadow p-1 rounded">
             <img src={bulkcard} alt="variety of products" />
             <div>
               <h1 className="text-[12px] py-0.5">Naija Essential Pack</h1>
@@ -114,7 +114,7 @@ export default function Bulk_combo() {
         </div>
 
         <div className="my-3 hidden lg:block md:block">
-          <div className="bg-white  shadow-xl p-1 rounded">
+          <div className="bg-white  shadow p-1 rounded">
             <img src={bulkcard} alt="variety of products" />
             <div>
               <h1 className="text-[12px] py-0.5">Naija Essential Pack</h1>

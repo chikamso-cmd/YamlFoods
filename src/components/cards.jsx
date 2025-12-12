@@ -29,7 +29,7 @@ const closeModal = () => {
 
   return (
     <div
-      className="w-full my-5"
+      className="w-full my-5 px-2"
       data-aos="fade-in"
       data-aos-delay="300"
       data-aos-duration="1000"
@@ -45,18 +45,18 @@ const closeModal = () => {
       </div>
       {/* card content */}
       <div className="card-container grid grid-cols-2  gap-4 mt-5 lg:grid-cols-6 md:grid-cols-3  ">
-        <div className=" car ">
-          <div className="bg-amber-100 h-[90px] py-5 ">
+        <div className=" card bg-white border border-[#f9f6ec] shadow shadow-gray-200">
+          <div className="bg-amber-100 h-[130px] ">
             <Link to="/Productdetails">
               <img
                 src={tomatoes}
                 alt="fresh tomatoes"
-                className="w-[60px] mx-auto  "
+                className="w-[120px]  mx-auto  "
               />
             </Link>
           </div>
           <div className="px-1">
-            <h1 className="text-[10px] pt-1">Tomatoes</h1>
+            <h1 className="text-[10px] pt-1">Fanta</h1>
             <p className="text-[10px] font-bold">#3,500</p>
             <div
               className="flex items-center justify-between py-2"
@@ -66,26 +66,24 @@ const closeModal = () => {
                 1 Paint
                 <FaChevronDown className="text-[9px] cursor-pointer" />
               </p>
-              {/* <Selectoptions isOpen={isOpen} onClose={closeModal} /> */}
               <button className="text-[10px] bg-amber-500 py-0.5 px-2 text-white rounded-xs cursor-pointer">
                 Add
               </button>
             </div>
           </div>
         </div>
-
-        <div className=" card bg-white">
-          <div className="bg-amber-100 h-[90px] py-5 ">
+        <div className=" card bg-white border border-[#f9f6ec] shadow shadow-gray-200">
+          <div className="bg-amber-100 h-[130px] ">
             <Link to="/Productdetails">
               <img
-                src={redpepper}
+                src={tomatoes}
                 alt="fresh tomatoes"
-                className="w-[60px] mx-auto  "
+                className="w-[120px]  mx-auto  "
               />
             </Link>
           </div>
           <div className="px-1">
-            <h1 className="text-[10px] pt-1">Long-pepper</h1>
+            <h1 className="text-[10px] pt-1">Fanta</h1>
             <p className="text-[10px] font-bold">#3,500</p>
             <div
               className="flex items-center justify-between py-2"
@@ -95,26 +93,24 @@ const closeModal = () => {
                 1 Paint
                 <FaChevronDown className="text-[9px] cursor-pointer" />
               </p>
-              {/* <Selectoptions isOpen={isOpen} onClose={closeModal} /> */}
               <button className="text-[10px] bg-amber-500 py-0.5 px-2 text-white rounded-xs cursor-pointer">
                 Add
               </button>
             </div>
           </div>
         </div>
-
-        <div className=" card bg-white">
-          <div className="bg-amber-100 h-[90px] py-5 ">
+        <div className=" card bg-white border border-[#f9f6ec] shadow shadow-gray-200">
+          <div className="bg-amber-100 h-[130px] ">
             <Link to="/Productdetails">
               <img
-                src={carrot}
+                src={tomatoes}
                 alt="fresh tomatoes"
-                className="w-[60px] mx-auto  "
+                className="w-[120px]  mx-auto  "
               />
             </Link>
           </div>
           <div className="px-1">
-            <h1 className="text-[10px] pt-1">Carrot</h1>
+            <h1 className="text-[10px] pt-1">Fanta</h1>
             <p className="text-[10px] font-bold">#3,500</p>
             <div
               className="flex items-center justify-between py-2"
@@ -124,26 +120,24 @@ const closeModal = () => {
                 1 Paint
                 <FaChevronDown className="text-[9px] cursor-pointer" />
               </p>
-              {/* <Selectoptions isOpen={isOpen} onClose={closeModal} /> */}
               <button className="text-[10px] bg-amber-500 py-0.5 px-2 text-white rounded-xs cursor-pointer">
                 Add
               </button>
             </div>
           </div>
         </div>
-
-        <div className=" card bg-white">
-          <div className="bg-amber-100 h-[90px] py-5 ">
+        <div className=" card bg-white border border-[#f9f6ec] shadow shadow-gray-200">
+          <div className="bg-amber-100 h-[130px] ">
             <Link to="/Productdetails">
               <img
-                src={onion}
+                src={tomatoes}
                 alt="fresh tomatoes"
-                className="w-[45px] mx-auto  "
+                className="w-[120px]  mx-auto  "
               />
             </Link>
           </div>
           <div className="px-1">
-            <h1 className="text-[10px] pt-1">Onions</h1>
+            <h1 className="text-[10px] pt-1">Fanta</h1>
             <p className="text-[10px] font-bold">#3,500</p>
             <div
               className="flex items-center justify-between py-2"
@@ -153,26 +147,24 @@ const closeModal = () => {
                 1 Paint
                 <FaChevronDown className="text-[9px] cursor-pointer" />
               </p>
-              {/* <Selectoptions isOpen={isOpen} onClose={closeModal} /> */}
               <button className="text-[10px] bg-amber-500 py-0.5 px-2 text-white rounded-xs cursor-pointer">
                 Add
               </button>
             </div>
           </div>
         </div>
-
-        <div className=" card bg-white hidden lg:block md:block">
-          <div className="bg-amber-100 h-[90px] py-5 ">
+        <div className=" hidden lg:block md:block bg-white border border-[#f9f6ec] shadow shadow-gray-200">
+          <div className="bg-amber-100 h-[130px] ">
             <Link to="/Productdetails">
               <img
-                src={bellpepper}
+                src={tomatoes}
                 alt="fresh tomatoes"
-                className="w-[60px] mx-auto  "
+                className="w-[120px]  mx-auto  "
               />
             </Link>
           </div>
           <div className="px-1">
-            <h1 className="text-[10px] pt-1">Bell Pepper</h1>
+            <h1 className="text-[10px] pt-1">Fanta</h1>
             <p className="text-[10px] font-bold">#3,500</p>
             <div
               className="flex items-center justify-between py-2"
@@ -182,26 +174,24 @@ const closeModal = () => {
                 1 Paint
                 <FaChevronDown className="text-[9px] cursor-pointer" />
               </p>
-              {/* <Selectoptions isOpen={isOpen} onClose={closeModal} /> */}
               <button className="text-[10px] bg-amber-500 py-0.5 px-2 text-white rounded-xs cursor-pointer">
                 Add
               </button>
             </div>
           </div>
         </div>
-
-        <div className=" card bg-white hidden lg:block md:block">
-          <div className="bg-amber-100 h-[90px] py-5 ">
+        <div className=" hidden lg:block md:block bg-white border border-[#f9f6ec] shadow shadow-gray-200">
+          <div className="bg-amber-100 h-[130px] ">
             <Link to="/Productdetails">
               <img
-                src={Cabbage}
+                src={tomatoes}
                 alt="fresh tomatoes"
-                className="w-[60px] mx-auto  "
+                className="w-[120px]  mx-auto  "
               />
             </Link>
           </div>
           <div className="px-1">
-            <h1 className="text-[10px] pt-1">Cabbage</h1>
+            <h1 className="text-[10px] pt-1">Fanta</h1>
             <p className="text-[10px] font-bold">#3,500</p>
             <div
               className="flex items-center justify-between py-2"
@@ -211,7 +201,6 @@ const closeModal = () => {
                 1 Paint
                 <FaChevronDown className="text-[9px] cursor-pointer" />
               </p>
-              {/* <Selectoptions isOpen={isOpen} onClose={closeModal} /> */}
               <button className="text-[10px] bg-amber-500 py-0.5 px-2 text-white rounded-xs cursor-pointer">
                 Add
               </button>

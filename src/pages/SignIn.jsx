@@ -3,6 +3,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import { IoEyeOffOutline, IoBasketOutline } from "react-icons/io5";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa";
+import LOGO from '../assets/LOGO.png'
 
 function SignIn() {
   const Navigate = useNavigate();
@@ -55,15 +56,23 @@ if (!email) {
       <div className="w-full">
         {/* Top navigation bar */}
         <div className="bg-[#f5f1e4] py-2 px-5 flex justify-between text-xs">
-          <span className="text-[10px] md:text-sm lg:text-2xl">Delivery within 24 hours</span>
-          <span className="text-[10px] md:text-sm lg:text-2xl">Operates in Arambra and Awka for now</span>
+          <span className="text-[10px] md:text-sm lg:text-md">
+            Delivery within 24 hours
+          </span>
+          <span className="text-[10px] md:text-sm lg:text-md">
+            Operates in Arambra and Awka for now
+          </span>
           <span className="hidden md:block lg:block">24/7 Support</span>
           <span className="hidden md:block lg:block">Secure Payment</span>
         </div>
 
         {/* Logo section */}
         <div className="bg-white py-4 px-5 flex justify-between items-center">
-          <div className="text-2xl font-bold">LOGO</div>
+          <div className="text-2xl font-bold">
+            <Link to="/">
+              <img src={LOGO} alt="company logo" className="lg:w-40 w-30" />
+            </Link>
+          </div>
           <Link to="/Cart">
             <button className="flex text-[12px] font-semibold items-center gap-2 cursor-pointer ">
               <IoBasketOutline className="text-[14px] font-semibold text-[#ff9900] " />
@@ -75,7 +84,7 @@ if (!email) {
 
       {/* Main form container */}
       <div
-        className="flex-1 flex justify-center items-center p-5"
+        className="flex-1 flex justify-center items-center p-3"
         data-aos="zoom-in-up"
         data-aos-delay="300"
         data-aos-duration="1000"
@@ -103,11 +112,13 @@ if (!email) {
                 placeholder="Example@gmail.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                
                 className="w-full p-2.5 border border-gray-300 rounded-md text-sm"
               />
-             {emailError && <p className="text-red-600 text-[9px] mt-1 px-2">{emailError}</p>}
-              
+              {emailError && (
+                <p className="text-red-600 text-[9px] mt-1 px-2">
+                  {emailError}
+                </p>
+              )}
             </div>
 
             {/* Password field */}
@@ -130,10 +141,13 @@ if (!email) {
                   placeholder="Enter Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                
                   className="w-full p-2.5 border border-gray-300 rounded-md text-sm"
                 />
-                {passworderror && <p className="text-red-600 text-[9px] mt-1 px-2">{passworderror}</p>}
+                {passworderror && (
+                  <p className="text-red-600 text-[9px] mt-1 px-2">
+                    {passworderror}
+                  </p>
+                )}
                 <button
                   type="button"
                   className="absolute right-2.5 top-1/2 transform -translate-y-1/2 bg-transparent border-none cursor-pointer text-gray-500"

@@ -13,7 +13,7 @@ export default function Category_card() {
       <div
         className="bg-[#FFCF33] relative py-9 rounded-3xl h-[200px] grid grid-cols-1 lg:grid-cols-2 overflow-hidden   bg-[url('/src/assets/rawfish.png')]
   bg-no-repeat
-  bg-[position:90%_95%]
+  bg-[position:100%_95%]
   bg-[length:contain]"
       >
         <div>
@@ -21,11 +21,11 @@ export default function Category_card() {
             Get that fresh protein and prepare that soup today! Your every day
             shop.
           </p>
-          <button className="cursor-pointer px-8 bg-white rounded mx-5 text-[10px] py-3 text-green-600">
+          <button className="cursor-pointer px-8 bg-white rounded mx-5 text-[16px]  py-2 mt-4 text-green-600">
             Shop Now
           </button>
         </div>
-        <img className="lg:block hidden" src={rawfish} alt="fresh fish" />
+        <img className=" hidden" src={rawfish} alt="fresh fish" />
       </div>
       <div>
         <div
@@ -35,14 +35,14 @@ export default function Category_card() {
   bg-[length:contain] "
         >
           <div>
-            <p className="py-9 px-5 font-semibold text-[18px] pb-3.5 mt-3">
+            <p className="py-9 px-5 font-semibold text-[16px] pb-3.5 mt-3 mr-13">
               Every day fresh and clean vegetables with our Products
             </p>
-            <button className=" cursor-pointer px-8 bg-white rounded mx-5 text-[10px] py-3 text-green-600">
+            <button className=" cursor-pointer px-8 bg-white rounded mx-5 text-[16px] py-2 mt-2 text-green-600">
               Shop Now
             </button>
           </div>
-          <img src={grocerybag} alt="fresh fish" className="hidden lg:block" />
+          <img src={grocerybag} alt="fresh fish" className="hidden lg:block " />
         </div>
       </div>
     </div>

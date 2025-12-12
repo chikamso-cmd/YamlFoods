@@ -18,65 +18,84 @@ export default function Shopcategory() {
   return (
     <div>
       <div
-        className="w-full px-6 py-10 "
+        className="w-full lg:px-6 md:px-6 py-10 "
         data-aos="zoom-in"
         data-aos-delay="300"
         data-aos-duration="1000"
       >
         <h1 className="text-xl text-center font-medium">Shop by Category</h1>
         <div className=" flex justify-between w-full  py-10 gap-3 overflow-x-scroll px-5 scrollbar-hide md:flex-wrap lg:flex-nowrap sm:flex-wrap ">
-          <div className="flex-none bg-[#EDF7EE] p-2 w-[200px] md:w-[200px] lg:w-[200px] rounded-2xl text-center">
-            <img
-              className="w-10 block mx-auto py-1"
-              src={leaf}
-              alt="vegitable picture"
-            />
-            <h4 className="text-[10px] py-2 font-bold">Vegitables & Fruits</h4>
+          <div className="flex-none flex-row-reverse bg-[#EDF7EE] p-2 w-[200px] md:w-[200px] lg:w-[200px] rounded-2xl text-center">
+            <div className="flex md:block md:items-center lg:block lg:items-center  items-center justify-center gap-4">
+              <img
+                className="w-10 block mt-2  md:mx-auto md:mt-2"
+                src={leaf}
+                alt="vegitable picture"
+              />
+              <h4 className="text-[10px] m2 lg:mt-2 font-bold">
+                Vegitables & Fruits
+              </h4>
+            </div>
           </div>
-
-          <div className="flex-none bg-[#FFF3CC] p-2 w-[200px] rounded-2xl text-center">
-            <img
-              className="w-10 justify-center block mx-auto py-1"
-              src={rice}
-              alt="vegitable picture"
-            />
-            <h4 className="text-[10px] py-2 font-bold">Grains & Rice</h4>
+          <div className="flex-none flex-row-reverse bg-[#EDF7EE] p-2 w-[200px] md:w-[200px] lg:w-[200px] rounded-2xl text-center">
+            <div className="flex md:block md:items-center lg:block lg:items-center  items-center justify-center gap-4">
+              <img
+                className="w-10 block mt-2  md:mx-auto md:mt-2"
+                src={cutmeant}
+                alt="vegitable picture"
+              />
+              <h4 className="text-[10px] m2 lg:mt-2 font-bold">
+                Vegitables & Fruits
+              </h4>
+            </div>
           </div>
-
-          <div className="flex-none bg-[#FEDCDC] p-2 w-[200px] rounded-2xl text-center">
-            <img
-              className="w-10 block mx-auto py-1"
-              src={cutmeant}
-              alt="vegitable picture"
-            />
-            <h4 className="text-[10px] py-2 font-bold">Meat & Fish</h4>
+          <div className="flex-none flex-row-reverse bg-[#EDF7EE] p-2 w-[200px] md:w-[200px] lg:w-[200px] rounded-2xl text-center">
+            <div className="flex md:block md:items-center lg:block lg:items-center  items-center justify-center gap-4">
+              <img
+                className="w-10 block mt-2  md:mx-auto md:mt-2"
+                src={bread}
+                alt="vegitable picture"
+              />
+              <h4 className="text-[10px] m2 lg:mt-2 font-bold">
+                Vegitables & Fruits
+              </h4>
+            </div>
           </div>
-
-          <div className="flex-none bg-[#FFC266] p-2 w-[200px] rounded-2xl text-center">
-            <img
-              className="w-10 block mx-auto py-1"
-              src={oildrum}
-              alt="vegitable picture"
-            />
-            <h4 className="text-[10px] py-2 font-bold">Oil & Spices</h4>
+          <div className="flex-none flex-row-reverse bg-[#EDF7EE] p-2 w-[200px] md:w-[200px] lg:w-[200px] rounded-2xl text-center">
+            <div className="flex md:block md:items-center lg:block lg:items-center  items-center justify-center gap-4">
+              <img
+                className="w-10 block mt-2  md:mx-auto md:mt-2"
+                src={oildrum}
+                alt="vegitable picture"
+              />
+              <h4 className="text-[10px] m2 lg:mt-2 font-bold">
+                Vegitables & Fruits
+              </h4>
+            </div>
           </div>
-
-          <div className="flex-none bg-[#C8EBFF] p-2 w-[200px] rounded-2xl text-center">
-            <img
-              className="w-10 block mx-auto py-1"
-              src={bread}
-              alt="vegitable picture"
-            />
-            <h4 className="text-[10px] py-2 font-bold">Bread & Dairy</h4>
+          <div className="flex-none flex-row-reverse bg-[#EDF7EE] p-2 w-[200px] md:w-[200px] lg:w-[200px] rounded-2xl text-center">
+            <div className="flex md:block md:items-center lg:block lg:items-center  items-center justify-center gap-4">
+              <img
+                className="w-10 block mt-2  md:mx-auto md:mt-2"
+                src={rice}
+                alt="vegitable picture"
+              />
+              <h4 className="text-[10px] m2 lg:mt-2 font-bold">
+                Vegitables & Fruits
+              </h4>
+            </div>
           </div>
-
-          <div className="flex-none bg-[#E0E2FE] p-2 w-[200px] rounded-2xl text-center">
-            <img
-              className="w-10 block mx-auto py-1"
-              src={softdrink}
-              alt="vegitable picture"
-            />
-            <h4 className="text-[10px] py-2 font-bold">Snacks & Drinks</h4>
+          <div className="flex-none flex-row-reverse bg-[#EDF7EE] p-2 w-[200px] md:w-[200px] lg:w-[200px] rounded-2xl text-center">
+            <div className="flex md:block md:items-center lg:block lg:items-center  items-center justify-center gap-4">
+              <img
+                className="w-10 block mt-2  md:mx-auto md:mt-2"
+                src={softdrink}
+                alt="vegitable picture"
+              />
+              <h4 className="text-[10px] m2 lg:mt-2 font-bold">
+                Vegitables & Fruits
+              </h4>
+            </div>
           </div>
         </div>
         <Category_card />

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation,Link } from "react-router-dom";
 import { getHeaderConfig } from "./configHheaders";
 import logo from '../assets/LOGO.png'
 import storemanager from '../assets/storemanager.jpg'
@@ -30,7 +30,9 @@ export default function SellerdashbordHeader() {
         </div>
       </div>
       <div className="lg:hidden md:hidden">
-        <img src={logo} alt="company logo" className="w-20" />
+        <Link to="/">
+          <img src={logo} alt="company logo" className="w-30" />
+        </Link>
       </div>
       <div className="flex items-center gap-3 mt-4 lg:hidden md:hidden">
         <img

@@ -187,7 +187,7 @@ export default function CartPage() {
           </div>
           <div className="flex mt-4 justify-between items-centerlg:hidden md:hidden">
             <button className="text-amber-500 text-sm mr-4 cursor-pointer text-[15px] border border-gray-300 rounded-md px-5 w-full mt-4 py-2 font-bold">
-              Remove
+              Remove All
             </button>
             <button className="text-white bg-amber-500 text-sm mr-4 cursor-pointer text-[15px] border border-gray-300 rounded-md px-5 w-full mt-4 py-2 font-bold hover:bg-amber-700 duration-500 transition-ease-in-out">
               Add more item

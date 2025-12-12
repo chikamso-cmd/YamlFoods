@@ -12,7 +12,7 @@ export default function Special_offer() {
       <div className=" special">
         <div
           className=" grid rounded grid-cols-1 lg:grid-cols-2 md:grid-cols-2 px-1 bg-[url('/src/assets/angry_man.png')]   bg-position-[100%_0px]
-  bg-[length:55%_100%,contain]
+  bg-size-[50%_100%,contain]
   bg-no-repeat md:bg-none"
         >
           <div className="pl-8 lg:py-5 md:py-8 mt-4 mg:mt-9">
