@@ -1,6 +1,6 @@
 import React from 'react'
 import rice from "../assets/rice.png";
-import maryland from "../assets/maryland.png";
+import maryland from "../assets/Maryland.png";
 import tomatoes from "../assets/tomatoes.png";
 import { FaCaretDown } from "react-icons/fa";
 
