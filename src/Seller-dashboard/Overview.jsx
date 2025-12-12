@@ -3,7 +3,7 @@ import { BsCreditCard2Back, BsBoxSeam } from "react-icons/bs";
 import { PiCaretLeftBold } from "react-icons/pi";
 import { TbHome2 } from "react-icons/tb";
 import { IoLocationOutline, IoSettingsOutline } from "react-icons/io5";
-import MobileFooter from '../Seller dashboard/MobileFooter'
+import MobileFooter from '../Seller-dashboard/MobileFooter'
 
 const Dashboard = () => {
   return (

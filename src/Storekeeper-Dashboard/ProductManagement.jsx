@@ -2,12 +2,12 @@
 import { FaEye, FaEdit, FaTrash } from "react-icons/fa";
 import { Search, Filter, CheckCircle, XCircle } from "lucide-react";
 import { FaPlus, FaCaretDown } from "react-icons/fa6";
-import { SlEye} from "react-icons/sl";
+import { SlEye } from "react-icons/sl";
 import { TfiTrash } from "react-icons/tfi";
 import { CiEdit, CiTrash } from "react-icons/ci";
 import { NavLink } from "react-router-dom";
-import ProductCard from "./Dashboard component/ProductCard";
-import meat from '../assets/meat.png'
+import ProductCard from "./Dashboard-component/ProductCard";
+import meat from "../assets/meat.png";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 
 const InventoryDashboard = () => {

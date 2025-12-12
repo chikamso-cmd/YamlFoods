@@ -1,5 +1,5 @@
-import React from 'react'
-import Ordercategory from './Dashboard component/Ordercategory';
+import React from "react";
+import Ordercategory from "./Dashboard-component/Ordercategory";
 
 export default function Orders() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import DashbordNav from "../Seller dashboard/DashbordNav";
-import UserProfile from "../Seller dashboard/UserProfile";
-import DashboardSidebar from "../Seller dashboard/DashboardSidebar";
+import DashbordNav from "../Seller-dashboard/DashbordNav";
+import UserProfile from "../Seller-dashboard/UserProfile";
+import DashboardSidebar from "../Seller-dashboard/DashboardSidebar";
 import { Outlet } from "react-router-dom";
 
 export default function LayoutForSellers() {

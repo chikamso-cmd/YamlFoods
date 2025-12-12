@@ -13,7 +13,7 @@ import { SlEye } from "react-icons/sl";
 import { TfiTrash } from "react-icons/tfi";
 import { CiEdit } from "react-icons/ci";
 import { NavLink } from "react-router-dom";
-import ProductCard from "./Dashboard component/ProductCard";
+import ProductCard from "./Dashboard-component/ProductCard";
 import { FaPlus } from "react-icons/fa6";
 
 function ProductInventory() {
