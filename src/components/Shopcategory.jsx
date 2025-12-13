@@ -24,7 +24,7 @@ export default function Shopcategory() {
         data-aos-duration="1000"
       >
         <h1 className="text-xl text-center font-medium">Shop by Category</h1>
-        <div className=" flex justify-between w-full  py-10 gap-3 overflow-x-scroll px-5 scrollbar-hide md:flex-wrap lg:flex-nowrap sm:flex-wrap ">
+        <div className=" flex justify-between w-full  py-10 gap-3 overflow-x-scroll px-5 [-ms-overflow-style:none] [scrollbar-width:none] md:flex-wrap lg:flex-nowrap sm:flex-wrap ">
           <div className="flex-none flex-row-reverse bg-[#FFF3CC] p-2 w-[200px] md:w-[200px] lg:w-[200px] rounded-2xl text-center">
             <div className="flex md:block md:items-center lg:block lg:items-center  items-center justify-center gap-3 mt-4 lg:mt-0 md:mt-0">
               <img

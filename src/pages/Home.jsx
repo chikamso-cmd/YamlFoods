@@ -7,7 +7,7 @@ import SignIn from "./SignIn";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-white">
       {/* <SignIn /> */}
       <GrocerySlider />
       <Shopcategory />

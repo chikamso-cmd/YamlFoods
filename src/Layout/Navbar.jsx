@@ -10,7 +10,7 @@ export default function Navbar() {
   const [isOpen, setisOpen] = useState(false);
 
   return (
-    <div className="w-full  ">
+    <div className="w-full  bg-white">
       <div className="flex justify-between font-medium bg-[#fff8e1] px-8 py-6 text-[10px] text-[#663d00] sm:text-[12px]  ">
         <h1 className="">Delivery within 24 hours</h1>
         <h1>Operates in Anambra and Awka for now</h1>

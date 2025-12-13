@@ -9,7 +9,7 @@ export default function Footer() {
   const [Hide, sethide] = useState(false);
 
   return (
-    <div className="lg:bg-green-900 md:bg-green-900 lg:text-white md:text-white text-black lg:px-9 lg:py-5 md:px-5 md:py-3 px-2">
+    <div className="lg:bg-green-900 md:bg-green-900 lg:text-white md:text-white text-black lg:px-9 lg:py-5 md:px-5 md:py-3 px-2 bg-white">
       {/* Footer */}
       <div className="lg:bg-green-900 md:bg-green-900 lg:text-white md:text-white text-black lg:p-10 grid lg:grid-cols-4 md:grid-cols-2  gap-6 md:p-3 p-2">
         <div className=" lg:hidden md:hidden">
