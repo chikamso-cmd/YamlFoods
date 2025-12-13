@@ -50,7 +50,7 @@ export default function MobileFooter() {
         </div>
         <div>
           <NavLink
-            to="/seller/account-settings"
+            to="/storekeeper/settings"
             className={({ isActive }) =>
               `${isActive ? "text-green-600 font-semibold" : ""}`
             }

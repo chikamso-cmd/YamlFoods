@@ -58,7 +58,7 @@ function SellerdashboardSidebar() {
               </NavLink>
 
               <NavLink
-                to="/seller/account-settings"
+                to="/storekeeper/settings"
                 className={({ isActive }) =>
                   `rounded  text-center cursor-pointer py-3 px-5 flex items-center gap-4 ${
                     isActive ? "bg-green-100 text-green-500" : ""

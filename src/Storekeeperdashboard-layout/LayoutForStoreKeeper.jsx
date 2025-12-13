@@ -11,7 +11,7 @@ export default function LayoutForStoreKeeper() {
 
 
   return (
-    <section className="w-full bg-green-50 flex  ">
+    <section className="w-full bg-white md:bg-green-50 lg:bg-green-50 flex  ">
       <aside className=" lg:block md:block hidden  shadow-cyan-50 rounded">
         <SellerdashboardSidebar />
       </aside>
@@ -21,7 +21,7 @@ export default function LayoutForStoreKeeper() {
           <SellerdashbordHeader />
           
         </header>
-        <main className="flex-1 w-full lg:px-5 lg:py-6 ">
+        <main className="flex-1 w-full px-1 py-0 lg:px-3 lg:py-3">
           <Outlet />
         </main>
         <div>

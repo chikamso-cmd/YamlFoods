@@ -11,14 +11,17 @@ import {
 } from "lucide-react";
 import { SlEye } from "react-icons/sl";
 import { TfiTrash } from "react-icons/tfi";
-import { CiEdit } from "react-icons/ci";
+import { CiEdit, CiTrash } from "react-icons/ci";
+import { FaEdit } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import ProductCard from "./Dashboard-component/ProductCard";
-import { FaPlus } from "react-icons/fa6";
+import { FaPlus, FaCaretDown } from "react-icons/fa6";
+import meat from "../assets/meat.png";
+import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 
 function ProductInventory() {
   return (
-    <div className="min-h-screen bg-white p-6">
+    <div className="min-h-screen bg-white md:p-4 p-2 lg:p-6">
       <div className="max-w-7xl mx-auto">
         <ProductCard />
         {/* Header Section */}
@@ -58,7 +61,7 @@ function ProductInventory() {
             </div>
 
             <NavLink to="/storekeeper/product-management/bulkadd">
-              <button className="flex items-center gap-2 text-[12px] bg-green-600 rounded px-5 text-white mb-2 cursor-pointer hover:bg-green-700 py-2">
+              <button className="flex items-center gap-2 text-[12px] bg-green-600 rounded px-3 text-white mb-2 cursor-pointer hover:bg-green-700 py-2">
                 {" "}
                 <FaPlus /> Add New Product
               </button>
@@ -66,7 +69,7 @@ function ProductInventory() {
           </div>
 
           {/* Content Container */}
-          <div className="bg-white">
+          <div className="bg-white hidden lg:block md:block">
             {/* Toolbar */}
             <div className="p-6 border-b border-gray-200">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -76,7 +79,7 @@ function ProductInventory() {
                   </h2>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-3">
+                <div className="lg:flex md:flex flex-col sm:flex-row gap-3 hidden">
                   {/* Search */}
                   <div className="relative">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -97,7 +100,7 @@ function ProductInventory() {
             </div>
 
             {/* Table */}
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto ">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
                   <tr>
@@ -611,6 +614,127 @@ function ProductInventory() {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Add Product Button */}
+          <div className="px-1 py-4 border-t border-gray-200 lg:hidden md:hidden sm:hidden ">
+            <div className="border border-gray-200 rounded-sm py-2 px-2 mb-1">
+              <div className="flex items-center gap-2 px-2 py-2 w-full">
+                <div className="flex gap-2 w-full">
+                  <div className="w-20 h-20">
+                    <img src={meat} alt="red meat" />
+                  </div>
+                  <div className="w-full">
+                    <div className="flex justify-between items-center  ">
+                      <div>
+                        <p className="text-[12px] font-medium">Meats</p>
+                      </div>
+                      <span className="text-[12px] text-green-600">
+                        100 in stock
+                      </span>
+                    </div>
+                    <p className="mt-2 text-[12px] font-medium ">N5,000</p>
+                    <p className="flex gap-2 item-center text-[12px]">
+                      {" "}
+                      1 KG <FaCaretDown />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex gap-3 justify-end">
+                <button className="flex items-center justify-center bg-green-600 hover:bg-blue-700 text-white font-semibold py-1 px-6 rounded-lg transition duration-200 ease-in-out transform hover:-translate-y-0.5 shadow-md text-[10px] w-40">
+                  <FaEdit className="mr-2" />
+                  Edit
+                </button>
+                <button className="flex items-center justify-center bg-red-200 hover:bg-blue-700 text-red-600 font-semibold py-1 px-6 rounded-lg transition duration-200 ease-in-out transform hover:-translate-y-0.5 shadow-md">
+                  <CiTrash className="mr-2" />
+                </button>
+              </div>
+            </div>
+            <div className="border border-gray-200 rounded-sm py-2 px-2 mb-1">
+              <div className="flex items-center gap-2 px-2 py-2 w-full">
+                <div className="flex gap-2 w-full">
+                  <div className="w-20 h-20">
+                    <img src={meat} alt="red meat" />
+                  </div>
+                  <div className="w-full">
+                    <div className="flex justify-between items-center  ">
+                      <div>
+                        <p className="text-[12px] font-medium">Meats</p>
+                      </div>
+                      <span className="text-[12px] text-green-600">
+                        100 in stock
+                      </span>
+                    </div>
+                    <p className="mt-2 text-[12px] font-medium ">N5,000</p>
+                    <p className="flex gap-2 item-center text-[12px]">
+                      {" "}
+                      1 KG <FaCaretDown />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex gap-3 justify-end">
+                <button className="flex items-center justify-center bg-green-600 hover:bg-blue-700 text-white font-semibold py-1 px-6 rounded-lg transition duration-200 ease-in-out transform hover:-translate-y-0.5 shadow-md text-[10px] w-40">
+                  <FaEdit className="mr-2" />
+                  Edit
+                </button>
+                <button className="flex items-center justify-center bg-red-200 hover:bg-blue-700 text-red-600 font-semibold py-1 px-6 rounded-lg transition duration-200 ease-in-out transform hover:-translate-y-0.5 shadow-md">
+                  <CiTrash className="mr-2" />
+                </button>
+              </div>
+            </div>
+            <div className="border border-gray-200 rounded-sm py-2 px-2 mb-1">
+              <div className="flex items-center gap-2 px-2 py-2 w-full">
+                <div className="flex gap-2 w-full">
+                  <div className="w-20 h-20">
+                    <img src={meat} alt="red meat" />
+                  </div>
+                  <div className="w-full">
+                    <div className="flex justify-between items-center  ">
+                      <div>
+                        <p className="text-[12px] font-medium">Meats</p>
+                      </div>
+                      <span className="text-[12px] text-green-600">
+                        100 in stock
+                      </span>
+                    </div>
+                    <p className="mt-2 text-[12px] font-medium ">N5,000</p>
+                    <p className="flex gap-2 item-center text-[12px]">
+                      {" "}
+                      1 KG <FaCaretDown />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex gap-3 justify-end">
+                <button className="flex items-center justify-center bg-green-600 hover:bg-blue-700 text-white font-semibold py-1 px-6 rounded-lg transition duration-200 ease-in-out transform hover:-translate-y-0.5 shadow-md text-[10px] w-40">
+                  <FaEdit className="mr-2" />
+                  Edit
+                </button>
+                <button className="flex items-center justify-center bg-red-200 hover:bg-blue-700 text-red-600 font-semibold py-1 px-6 rounded-lg transition duration-200 ease-in-out transform hover:-translate-y-0.5 shadow-md">
+                  <CiTrash className="mr-2" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* mobile button for padgination */}
+        <div className="mt-4">
+          <div className="flex justify-between items-center px-2">
+            <IoIosArrowRoundBack />
+            <div className="flex gap-1">
+              <button className="border px-3 rounded border-gray-200 text-[12px] py-1 bg-blue-100">
+                1
+              </button>
+              <button className="border px-3 rounded border-gray-200 text-[12px] py-1">
+                ...
+              </button>
+              <button className="border px-3 rounded border-gray-200 text-[12px] py-1">
+                5
+              </button>
+            </div>
+            <IoIosArrowRoundForward />
           </div>
         </div>
       </div>

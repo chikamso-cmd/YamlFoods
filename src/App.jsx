@@ -43,10 +43,26 @@ import AddProductBulk from "./Storekeeper-Dashboard/BulkProducts";
 
 // Dashboard-component
 import ProductCard from "./Storekeeper-Dashboard/Dashboard-component/ProductCard";
+//settings-component
+import Settings from "./settings/Settings";
+import ProfileSettingsScreen from "./settings/componentts/ProfileSettings";
+import StoreInformationScreen from "./settings/componentts/StoreInformation";
+import ProductPreferenceScreen from "./settings/componentts/ProductPreference";
+import OrderManagement from "./settings/componentts/OrderManagement";
+import NotificationSettings from "./settings/componentts/NotificationSettings";
+import SecuritySettings from "./settings/componentts/SecuritySettings";
+import SupportSettings from "./settings/componentts/CustomerSupport";
 
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+
+
+
+
+
+
 
 function App() {
   useEffect(() => {
@@ -111,6 +127,16 @@ function App() {
             path="product-management/add-product"
             element={<AddProduct />}
           />
+
+          {/* settings */}
+          <Route path='settings' element={<Settings />}/>
+          <Route path='settings/profile-settings' element={<ProfileSettingsScreen />}/>
+          <Route path='settings/store-information' element={<StoreInformationScreen />}/>
+          <Route path='settings/product-preference' element={<ProductPreferenceScreen />}/>
+          <Route path='settings/order-management' element={<OrderManagement />}/>
+          <Route path='settings/notification-settings' element={<NotificationSettings />}/>
+          <Route path='settings/security-settings' element={<SecuritySettings />}/>
+          <Route path='settings/customer-support' element={<SupportSettings />}/>
         </Route>
       </Routes>
     </Router>

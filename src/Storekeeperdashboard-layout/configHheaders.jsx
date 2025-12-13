@@ -8,8 +8,16 @@ export const headerConfigs = {
     subtitle: "Manage your grocery store inventory",
   },
   "/storekeeper/settings": {
-    title: "Dashboard Overview",
-    subtitle: "Welcome back Here's what happening today",
+    title: "Settings",
+    subtitle: "",
+  },
+  "/storekeeper/settings/profile-settings": {
+    title: "Settings",
+    subtitle: "",
+  },
+  "/storekeeper/settings/store-information": {
+    title: "Settings",
+    subtitle: "",
   },
   "/storekeeper/my-orders/view-orders": {
     title: "View Orders",
