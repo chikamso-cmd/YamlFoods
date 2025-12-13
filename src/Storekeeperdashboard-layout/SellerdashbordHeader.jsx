@@ -29,22 +29,24 @@ export default function SellerdashbordHeader() {
           <p className="text-[11px]">Store Manager</p>
         </div>
       </div>
-      <div className="lg:hidden md:hidden">
-        <Link to="/">
-          <img src={logo} alt="company logo" className="w-30" />
-        </Link>
-      </div>
-      <div className="flex items-center gap-3 mt-4 lg:hidden md:hidden">
-        <img
-          src={storemanager}
-          alt="storemanager"
-          className="w-10 rounded-full h-10"
-        />
-        <div className="">
-          <h1 className="text-[15px] font-bold">Store Manager</h1>
-          <p className="text-[10px]">
-            Welcome back! Here's what's happening today.
-          </p>
+      <div className="fixed top-0 left-0 z-50 bg-white w-full px-4 py-3 shadow-md lg:hidden md:hidden">
+        <div className="lg:hidden md:hidden">
+          <Link to="/">
+            <img src={logo} alt="company logo" className="w-30" />
+          </Link>
+        </div>
+        <div className="flex items-center gap-3 mt-4 lg:hidden md:hidden">
+          <img
+            src={storemanager}
+            alt="storemanager"
+            className="w-10 rounded-full h-10"
+          />
+          <div className="">
+            <h1 className="text-[15px] font-bold">Store Manager</h1>
+            <p className="text-[10px]">
+              Welcome back! Here's what's happening today.
+            </p>
+          </div>
         </div>
       </div>
     </div>

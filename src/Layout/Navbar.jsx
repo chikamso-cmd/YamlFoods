@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <div className="w-full  bg-white">
-      <div className="flex justify-between font-medium bg-[#fff8e1] px-8 py-6 text-[10px] text-[#663d00] sm:text-[12px]  ">
+      <div className="lg:flex md:flex hidden justify-between font-medium bg-[#fff8e1] px-8 py-6 text-[10px] text-[#663d00] sm:text-[12px]  ">
         <h1 className="">Delivery within 24 hours</h1>
         <h1>Operates in Anambra and Awka for now</h1>
         <div className=" justify-between w-[200px] hidden  sm:flex   ">
@@ -19,7 +19,7 @@ export default function Navbar() {
           <h1>Secure Payment</h1>
         </div>
       </div>
-      <div className="flex lg:justify-evenly md:justify-between items-center px-8 py-7 lg:w-full">
+      <div className="flex lg:justify-evenly fixed top-0 z-50 bg-white lg:relative md:relative md:justify-between items-center px-3 py-7 lg:w-full">
         <Link to="/">
           <img
             className="w-[40%] sm:w-[20%] md:w-50 lg:w-[50%] cursor-pointer"
@@ -85,7 +85,7 @@ export default function Navbar() {
                 />
               </Link>
 
-              <select className="bg-green-700 w-full text-white py-1.5 px-3 mb-3 rounded text-[10px]">
+              <select className="hidden bg-green-700 w-full text-white py-1.5 px-3 mb-3 rounded text-[10px]">
                 <option className="bg-white text-green-700" value="anambra">
                   Anambra
                 </option>
@@ -95,25 +95,25 @@ export default function Navbar() {
               </select>
 
               <input
-                className="border rounded px-2 py-1 text-white capitalize text-[14px] w-full border-white placeholder:text-[10px] mb-3"
+                className="hidden border rounded px-2 py-1 text-white capitalize text-[14px] w-full border-white placeholder:text-[10px] mb-3"
                 type="search"
                 placeholder="search"
               />
 
               <div className="text-[10px] lg:hidden md:block">
-                <button className="text-[10px] bg-[#358b38] rounded text-white px-4 py-2 cursor-pointer hover:bg-green-600 duration-400 w-full mb-3">
+                <button className="text-[10px] bg-[#358b38] rounded text-white px-4 py-2 cursor-pointer hover:bg-green-600 duration-400 hidden w-full mb-3">
                   Install App
                 </button>
 
                 <Link to="/signin">
-                  <button className="text-green-500 text-sm flex items-center gap-1 cursor-pointer mb-2 mt-2">
+                  <button className="text-green-500 text-sm flex items-center gap-1 cursor-pointer mb-2 mt-2 hidden">
                     <FaRegUser className="text-sm" />
                     Login
                   </button>
                 </Link>
 
                 <Link to="/Cart">
-                  <button className="flex text-white items-center gap-1 cursor-pointer text-sm">
+                  <button className="flex hidden text-white items-center gap-1 cursor-pointer text-sm">
                     <IoBasketOutline className="text-sm text-[#ff9900]" />
                     My Basket
                   </button>

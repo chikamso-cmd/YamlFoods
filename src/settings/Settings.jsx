@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 
 export default function Settings() {
   return (
-    <div className="w-full  px-2 py-2 mb-3">
+    <div className="w-full  px-2 py-2 mb-15 mt-20 lg:mb-3 md:mb-3 lg:mt-0 md:mt-0">
       <div className="bg-white border-b border-b-gray-300 ">
         <h1 className="text-[24px] font-semibold mb-5">Settings</h1>
       </div>
@@ -161,7 +161,7 @@ export default function Settings() {
         </div>
       </div>
 
-      <div className="bg-white py-5 px-4 w-full text-center rounded-2xl text-red-700">
+      <div className="bg-white py-5 px-4 w-full text-center rounded-2xl text-red-700 shadow-md cursor-pointer">
         <Link to="/signin">
           <LogOut className="mx-auto cursor-pointer" />
         </Link>

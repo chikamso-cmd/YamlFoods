@@ -14,7 +14,7 @@ const InventoryDashboard = () => {
   // const fame = use()
 
   return (
-    <div className="bg-white min-h-screen p-6">
+    <div className="bg-white min-h-screen p-6 mt-20 lg:mt-0 md:mt-0">
       <ProductCard />
 
       {/* Products Table */}

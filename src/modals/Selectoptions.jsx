@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BsX, BsDash, BsPlus, BsCheckCircle } from "react-icons/bs";
-import tomatoes from "../assets/tomatoes.png"; 
-import {Link} from 'react-router-dom'
+import tomatoes from "../assets/tomatoes.png";
+import { Link } from "react-router-dom";
 
 // Reusable Item Component
 function TomatoItem({ weight, price }) {
@@ -21,7 +21,8 @@ function TomatoItem({ weight, price }) {
       <div className="flex flex-col flex-1 ml-3">
         <div className="flex justify-between">
           <div className="block">
-            <span className="text-[10px] font-semibold">{weight}</span><br />
+            <span className="text-[10px] font-semibold">{weight}</span>
+            <br />
             <span className="text-[10px] font-bold text-gray-700">
               ₦{price}
             </span>
@@ -72,14 +73,13 @@ function TomatoItem({ weight, price }) {
   );
 }
 
-export default function TomatoModal({isOpen, onClose}) {
-
+export default function TomatoModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 ">
       {/* Modal Box */}
-      <div className="bg-white w-[400px] rounded-xl shadow-xl pb-3">
+      <div className="bg-white w-full max-w-[400px] mx-4 rounded-xl shadow-xl pb-3">
         {/* Header */}
         <div className="relative px-5 pt-5">
           <BsX

@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <div className="lg:bg-green-900 md:bg-green-900 lg:text-white md:text-white text-black lg:px-9 lg:py-5 md:px-5 md:py-3 px-2 bg-white">
       {/* Footer */}
-      <div className="lg:bg-green-900 md:bg-green-900 lg:text-white md:text-white text-black lg:p-10 grid lg:grid-cols-4 md:grid-cols-2  gap-6 md:p-3 p-2">
+      <div className="lg:bg-green-900 md:bg-green-900 lg:text-white md:text-white text-black lg:p-10 grid lg:grid-cols-4 md:grid-cols-2  gap-6 md:p-3 p-2 pb-10">
         <div className=" lg:hidden md:hidden">
           <h1 className="text-[10px] px-3 py-3">Get the App</h1>
           <button className="flex items-center gap-3 cursor-pointer bg-black  rounded-xl text-white px-7 py-1">
@@ -56,10 +56,10 @@ export default function Footer() {
 
             {hide && (
               <ul className="text-sm space-y-1 transition-all">
-                <li>About Us</li>
-                <li>How it works</li>
-                <li>Delivery Info</li>
-                <li>Contact Us</li>
+                <li className="font-light">About Us</li>
+                <li className="font-light">How it works</li>
+                <li className="font-light">Delivery Info</li>
+                <li className="font-light">Contact Us</li>
               </ul>
             )}
           </div>
@@ -91,10 +91,10 @@ export default function Footer() {
 
             {Hide && (
               <ul className="text-sm space-y-1 transition-all">
-                <li>Facebook</li>
-                <li>Twitter</li>
-                <li>Instagram</li>
-                <li>Linkedin</li>
+                <li className="font-light">Facebook</li>
+                <li className="font-light">Twitter</li>
+                <li className="font-light">Instagram</li>
+                <li className="font-light">Linkedin</li>
               </ul>
             )}
           </div>
@@ -114,7 +114,7 @@ export default function Footer() {
         © 2025 FreshMart. All rights reserved.
       </div>
       {/* mobile footer */}
-      <div className="bg-white px-3 py-4 flex items-center justify-between lg:hidden md:hidden">
+      <div className="bg-white shadow-inner shadow-gray-100 px-3 py-4 flex items-center justify-between  lg:hidden md:hidden fixed z-50 bottom-0 left-0 w-full px-8">
         <div className="text-center flex flex-col justify-center items-center text-sm font-semibold cursor-pointer">
           <NavLink
             to="/"

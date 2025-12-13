@@ -8,12 +8,12 @@ export default function RecentlyViewed() {
   return (
     <div>
       <div
-        className="flex gap-6 mt-4"
+        className="grid grid-cols-3 overflow-x-scroll lg:grid-cols-3 gap-2 mt-4 mb-4"
         data-aos="fade-up"
         data-aos-delay="500"
         data-aos-duration="2000"
       >
-        <div className=" bg-white shadow w-40">
+        <div className=" bg-white shadow ">
           <div className="bg-amber-100 h-[90px] py-5 ">
             <img
               src={tomatoes}
@@ -35,7 +35,7 @@ export default function RecentlyViewed() {
             </div>
           </div>
         </div>
-        <div className=" bg-white shadow w-40">
+        <div className=" bg-white shadow ">
           <div className="bg-amber-100 h-[90px] py-5 ">
             <img
               src={maryland}
@@ -57,7 +57,7 @@ export default function RecentlyViewed() {
             </div>
           </div>
         </div>
-        <div className=" bg-white shadow w-40">
+        <div className=" bg-white shadow ">
           <div className="bg-amber-100 h-[90px] py-5 ">
             <img
               src={rice}

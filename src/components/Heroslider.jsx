@@ -18,7 +18,7 @@ const GrocerySlider = () => {
 
   return (
     <div
-      className=" "
+      className=" mt-20 lg:mt-0 md:mt-0"
       data-aos="fade-in"
       data-aos-delay="300"
       data-aos-duration="2000"

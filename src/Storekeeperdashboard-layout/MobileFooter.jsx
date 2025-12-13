@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { CiGrid32 } from "react-icons/ci";
 import { FiSettings, FiShoppingBag } from "react-icons/fi";
@@ -6,7 +6,7 @@ import { BsBoxSeam } from "react-icons/bs";
 
 export default function MobileFooter() {
   return (
-    <div className="w-full lg:hidden md:hidden">
+    <div className=" fixed bottom-0 z-50 shadow-inner shadow-gray-300 w-full lg:hidden md:hidden">
       <div className="flex justify-between items-center text-[12px] bg-white shadow-sm  w-full px-5 py-3 lg:hidden md:hidden">
         <div className="cursor-pointer">
           <NavLink

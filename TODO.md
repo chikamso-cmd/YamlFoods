@@ -1,0 +1,2 @@
+- [x] Make the modal width responsive by changing 'w-[400px]' to 'w-full max-w-[400px] mx-4' in the modal box div in src/modals/Selectoptions.jsx
+- [x] Add padding to the modal backdrop for better centering on mobile by adding 'p-4' to the outer div
